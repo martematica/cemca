@@ -1,0 +1,3 @@
+# cemca
+Página para informações das discplinas do professor Marcelo Vieira dos Santos
+onde tem conteúdos de Educação financeira, iniciação a programação, Robótica e etc...
