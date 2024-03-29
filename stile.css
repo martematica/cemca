@@ -85,7 +85,7 @@ body
 h1
 {
     text-align: center;
-    color:black;
+    color:white;
 }
 h4
 {
@@ -143,4 +143,9 @@ video
 {
     width: 50%;
     height: 50%;
+}
+footer{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    text-align: right;
 }
