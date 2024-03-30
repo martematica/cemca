@@ -3,6 +3,13 @@
 ## Descrição
 Este projeto tem como objetivo fornecer conteúdos introdutórios sobre Robótica, Educação Financeira e Energia e Astronomia abrangendo conceitos fundamentais, exemplos práticos e recursos adicionais para iniciantes, e ajudar de alguma forma.
 
+##Fotos
+![Tesserato](https://github.com/martematica/cemca/blob/main/Imagens/Tesserato.gif)
+![Urano](https://github.com/martematica/cemca/blob/main/Imagens/Urano.jpeg)
+![Júpiter](https://github.com/martematica/cemca/blob/main/Imagens/J%C3%BApiter.jpeg)
+
+
+
 ## Tópicos Cobertos
 - Introdução à Robótica
 - Componentes básicos
