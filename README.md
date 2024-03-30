@@ -22,4 +22,4 @@ Se você deseja contribuir com mais conteúdo ou correções, sinta-se à vontad
 - Marcelo Vieira dos Santos martematica.github.io/cemca: Desenvolvedor e mantenedor do projeto
 
 ## Licença
-Este projeto está licenciado sob a [Nome da Licença]. Consulte o arquivo LICENSE.md para obter mais detalhes.
+Este projeto está licenciado sob a [LICENSE.md]. Consulte o arquivo https://github.com/martematica/cemca/blame/main/LICENSE para obter mais detalhes.
