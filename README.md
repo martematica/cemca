@@ -4,8 +4,10 @@
 Este projeto tem como objetivo fornecer conteúdos introdutórios sobre Robótica, Educação Financeira e Energia e Astronomia abrangendo conceitos fundamentais, exemplos práticos e recursos adicionais para iniciantes, e ajudar de alguma forma.
 
 ##Fotos
+
 ![Tesserato](https://github.com/martematica/cemca/blob/main/Imagens/Tesserato.gif)
 ![Urano](https://github.com/martematica/cemca/blob/main/Imagens/Urano.jpeg)
+![Robótica](https://github.com/martematica/cemca/blob/main/Imagens/Animacao%20Kid%20Robot%20(1).png)
 ![Júpiter](https://github.com/martematica/cemca/blob/main/Imagens/J%C3%BApiter.jpeg)
 
 
