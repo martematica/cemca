@@ -1,30 +1,19 @@
-# Conteúdos Básicos de Robótica
+# Conteúdos Básicos de Robótica, Progamação, Energia e Astronomia e Educação Financeira
 
 ## Descrição
-Este projeto tem como objetivo fornecer conteúdos introdutórios sobre robótica, abrangendo conceitos fundamentais, exemplos práticos e recursos adicionais para iniciantes.
+Este projeto tem como objetivo fornecer conteúdos introdutórios sobre as componentes curriculares citadas, abrangendo conceitos básicos para cada componente de forma que possa ajudar.
 
 ## Tópicos Cobertos
-- Introdução à robótica
-- Componentes básicos de um robô
-- Programação de robôs
-- Exemplos de projetos simples
-- Recursos adicionais
+- Introdução à robótica.
+- Componentes básicos da robótica.
+- Programação de uma página em html.
+- Energia e suas diferentes formas.
+- O sistema solar e que podemos observar do céu.
+- Como viver com os recursos do dia dia.
 
-## Estrutura do Projeto
-- `introducao.md`: Introdução à robótica
-- `componentes.md`: Componentes básicos de um robô
-- `programacao.md`: Noções de programação para robôs
-- `projetos.md`: Exemplos de projetos simples
-- `recursos.md`: Lista de recursos adicionais
-
-## Contribuição
-Se você deseja contribuir com mais conteúdo ou correções, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
 ## Equipe
-- [Seu Nome](link para perfil): Desenvolvedor e mantenedor do projeto
-
-## Como Contribuir
-Para contribuir com este projeto, siga as instruções em CONTRIBUTING.md.
+- prof: Marcelo Vieira dos Santos(https://martematica.github.io/cemca/): Desenvolvedor e mantenedor do projeto
 
 ## Licença
-Este projeto está licenciado sob a [Nome da Licença]. Consulte o arquivo LICENSE.md para obter mais detalhes.
+Este projeto está licenciado sob a Licença.md Consulte o arquivo LICENSE.md para obter mais detalhes no endereço https://github.com/martematica/cemca?tab=MIT-1-ov-file.
