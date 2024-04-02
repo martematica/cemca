@@ -17,3 +17,4 @@ Este projeto tem como objetivo fornecer conteúdos introdutórios sobre as compo
 
 ## Licença
 Este projeto está licenciado sob a Licença.md Consulte o arquivo LICENSE.md para obter mais detalhes no endereço https://github.com/martematica/cemca?tab=MIT-1-ov-file.
+
