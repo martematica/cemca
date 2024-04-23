@@ -51,12 +51,14 @@
     border-radius: 15px;
     margin: 1.2%;
     min-width:200px;
+    font-size:75%;
 }
 .b1:hover
 {
     background-image: url(Imagens/programação.jpeg);
     border:solid;
     border-color: red;
+    color:white;
 }
 .capa
 {
@@ -129,7 +131,7 @@ a
 }
 a:hover
 {
-    color:red;
+    color:white;
 }
 
 ul
