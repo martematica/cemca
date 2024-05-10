@@ -1,37 +1,18 @@
 
-.divfundo{
-    background-image:url(Imagens/fundoroboticaPP.png);
-    max-width: 870px;
-    max-height:1230px;
+.Top{
+    background-image:url(Imagens/programação.jpeg);
+    height:100px;
+    border-radius:10px 10px 0px 0px;
 }
-.divprogramas{
-    background-image: url(Imagens/mblock.jpeg);
-    height: 80px;
-    border-radius: 10px 10px 0px 0px;
+table{
+    border:solid;
 }
-.divRPP1{
-    background-color:aquamarine;
-    height: 590px;
-    max-width:510px;
-    margin-left:355px;
-    border-style:solid;
-    border-color:blue;
+.div1{
+    background-image:url(Imagens/logoEA.png);
 }
-.divcabeçalhorobotica{
-    background-image:url(Imagens/robo.jpg);
-    height: 80px;
-    max-width:1220px;
-    border-radius: 10px 10px 0px 0px;
+img{
+    border-radius:100px;
 }
-.dived{
-    background-image:url(Imagens/logoedfinanceira.avif);
-    height: 80px;
-}
-.div1{background-image: url(Imagens/logoEA.png);
-    height:auto;
-    border-radius:0px 0px 10px 10px;
-}
-
 .b1
 {
     width:30%;
