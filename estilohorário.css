@@ -1,0 +1,31 @@
+body{
+    margin-left:15%;
+    margin-right:15%;
+}
+.TopHorário{
+    background-image: url(Imagens/relogio.jpg);
+    height: 90px;
+}
+table
+{
+    background-color:black;
+    align-content: center;
+    color:black;
+}
+td{
+    border: none;
+}
+td
+{
+    background-color:white;
+}
+th{
+    background-color: black;
+    color: aqua;
+    text-align: center;
+}
+footer{
+    text-align:center;
+    font-size:medium;
+    font-family: 'Courier New', Courier, monospace;
+}

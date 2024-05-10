@@ -1,0 +1,51 @@
+body{
+    margin-left:15%;
+    margin-right:15%;
+}
+.TopEdFinanceira{
+    background-image:url(Imagens/logoedfinanceira.avif);
+    height:90px;
+    border-radius:10px;
+}
+.TopProgramação{
+    background-image:url(Imagens/programação.jpeg);
+    height:90px;
+    border-radius:10px;
+}
+.TopRobótica{
+    background-image: url(Imagens/cabeçalhoroboticapp1.jpeg);
+    height: 90px;
+    border-radius: 10px;
+}
+.TopRobóticaII{
+    background-image: url(Imagens/robo.jpg);
+    height: 90px;
+    border-radius:10px;
+}
+.TopFísicaII{
+    background-image: url(Imagens/robo.jpg);
+    height: 90px;
+    border-radius:10px;
+}
+.TopProgramação{
+    background-image:url(Imagens/programação.jpeg);
+    height:90px;
+    border-radius:10px;
+}
+a{
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;text-decoration:none;
+}
+a:hover{
+    color:red;
+}
+img{
+    width:100px;
+    border-radius:50px;
+}
+footer{
+    text-align:center;
+    font-size:medium;
+    font-family: 'Courier New', Courier, monospace;
+}
