@@ -14,9 +14,14 @@ h1{
     text-align:center;
     background-color: blue;
     border-radius:10px;
+    font-size: 60px;
 }
 h2{
     text-align: center;
+    font-size:40px;
+}
+h3{
+    font-size:30px;
 }
 img{
     margin-left:0%;
