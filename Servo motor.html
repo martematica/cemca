@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martematica</title>
+    <link rel="stylesheet" href="estiloaulas.css">
+</head>
+
+<body>
+    
+    <div></div>
+    <h1>Robótica</h1> 
+    <h2>Servo Motor</h2>
+    Os Servos Motores são dispositivos que possuem movimento
+rotativo proporcional a um comando para atingir a posição desejada
+com velocidade monitorada. <br><br>
+Lista de Materiais
+<ul>
+<li>01 Placa Arduino Uno R3;</li>
+<li>01 Servo Motor MG 90S;</li>
+<li>03 Jumpers Macho-Macho;</li>
+<li>01 Notebook;</li>
+<li>01 Cabo USB;</li>
+<li>Software Arduino IDE.</li>
+</ul> <br>
+<img src="Imagens/servomotor.png" alt="">
+<br>
+Os Servos Motores são acionados através de três
+fios: marrom (GND), vermelho (5V) e laranja (sinal)
+<br><br>
+<h3>Montagem</h3> 
+<img src="Imagens/circuitoservo.png" alt=""> <br>
+<br>
+<h3>Programação</h3>
+
+
+#include &#60;Servo.h&#62; <br>
+Servo meuservo;<br>
+int Pino_Servo = 7;<br>
+void setup() {<br>
+meuservo.attach(Pino_Servo);<br>
+}<br><br>
+void loop() {<br>
+meuservo.write(0);<br>
+delay(1000);<br>
+meuservo.write(90);<br>
+delay(1000);<br>
+meuservo.write(180);<br>
+delay(1000);<br>
+}<br>
+
+
+
+<footer>Atualização agosto de 2024</footer>
+</body>
+</html>
