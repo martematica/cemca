@@ -21,7 +21,7 @@ img{
     border-radius: 15px;
     margin: 1.2%;
     min-width:200px;
-    font-size:65%;
+    font-size:55%;
 }
 .b1:hover
 {
@@ -70,7 +70,7 @@ p
     text-align: justify;
     text-indent: 5%;
     text-decoration: solid;
-    font-size: xx-large;
+    font-size: x-large;
 }
 a
 {
