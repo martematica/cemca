@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robótica</title>
+    <link rel="stylesheet" href="estiloaulas.css">
+</head>
+
+<body>
+    
+    <div></div>
+    <h1>Luzes de Natal </h1> 
+    <h3>Fita de LEDs</h3>
+    Uma faixa de LED endereçável, em sua essência, é uma placa de circuito flexível 
+    preenchida com LEDs que você pode controlar individualmente. Isso significa que cada
+     LED – ou um pequeno grupo de LEDs – pode exibir uma cor ou brilho diferente ao 
+     mesmo tempo que outros na mesma faixa. <br><br>
+
+    conexão é bem simples com apenas três fios vcc positivo no 5v, GND negativo no 
+    também GND do arduino, e D0 que colocaremos em uma saida digital em nosso caso 
+    na saida 6. <br><br>
+    depois de feito as conexões, basta abrir o programa Arduino IDE e <b>Ferramentas</b> depois 
+    em <b>Gerenciar biblioteca</b>  
+    <br><br>
+    <img src="Imagens/Luzes de Natal.jpeg" alt=""> <br> 
+    Quando abrir a janela escrever Adafruit_NeoPixel e baixar as bibliotecas Adafruit_NeoPixel e Adafruit_NeoMatrix <br><br>
+    <img src="Imagens/luzes de natal 2.jpeg" alt=""> <br><br>
+    Após baixada a bibliotecas necessárias ir em <b>Arquivos</b>, depois em <b>Exemplos</b>, depois em 
+    <b>Adafruit_NeoPixel</b> e finaliza em <b>simple</b> para abrir uma programação pré-configurada <br><br>
+    <img src="Imagens/luzes de natal 5.jpeg" alt=""> <br>
+    Agora basta ajusta a programação veja:
+    <img src="Imagens/Luzes de natal 3.jpeg" alt=""> <br>
+
+    <b> NUMPIXELS</b> é a quantidade de LEDs tem sua fita se for uma coloque 300 em nosso caso colocaremos 
+    600 pois são duas fitas de 300 cada <br>
+    <b>DELEYVAL</b> é o tempo de espera entre ligar um LED e outro, coloque <b>3</b> pois assim os leds terão uma aternancia mais rápida e dinâmica
+    com 3 segundos <br><br>
+    <img src="Imagens/Luzes de natal 4.jpeg" alt=""><br>
+    e na programação colocaremos 6 ordens de função para ligar três indo do inicio para o final 
+    e as outras três do fim para o inicio, alternando também as cores <br><br>
+Agora façam as conexões e programação e confira seu pisca-pisca de Natal. <br><br>
+
+
+
+
+
+<footer><br>
+<b>Obs: feito pelos alunos Guilherme Bueno e Rebeca Ramos Robotica Educacional do Colegio Maria Cintra</b>
+<br>Atualização Dezembro de 2024 </footer>
+</body>
+</html>
