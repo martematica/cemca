@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotica</title>
+    <link rel="stylesheet" href="estiloaulas.css">
+</head>
+
+<body>
+    
+    <div></div>
+    <h1>Painel Letreiro</h1> 
+    <h3>Painel de LEDs 8x32</h3>
+
+    Os LEDs endereçáveis ​​são uma nova geração de LEDs, pois incluem um chip controlador, geralmente o WS2812,
+     que permite acessar vários LEDs com um único pino digital, atribuindo um endereço a cada LED e fornecendo 
+     uma comunicação por fio. <br>
+     Os paineis de Leds endereçaveis são organizados em foma de zig zag de 8 em 8 leds formando uma matrix 8x32, 
+     com duas podemos fomar um letreiro <br>
+     A conexão é simples temos um <b>GND</b>, um <b>5v</b> e um sinal de comunicação <b>D0</b> que ligaremos no porta 6 <br>
+
+     <img src="Imagens/letreiro.png" alt=""> <br>
+
+     depois basta abrir o programa Arduino IDE e baixar as bibliotecas <b>Adafrui_NeoPixel</b> e <b>Adafrui_NeoMatrix</b> <br>
+     <img src="Imagens/Luzes de Natal.jpeg" alt=""> <br>
+     <img src="Imagens/luzes de natal 2.jpeg" alt=""> <br>
+
+     Agora basta modificar o cadigo da seguinte forma <br>
+     na linha <b>Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(64, 8, PIN,</b> coloque a configuração da matrix, nosso caso 64 por 8, 
+     caso sua matriz for maior troque, 64 numeros de colunas e 8 numeros de linhas 
+depois da linha <b>Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(64, 8, PIN,</b> modificar <b>NEO_MATRIX_RIGHT</b> para 
+<b>NEO_MATRIX_LEFT</b> e acrescentar <b>+ NEO_MATRIX_ZIGZAG</b> para que as letra se mova da direta para esquerta e 
+configure a organização dos LEDs que é em zig zag, na linha <b> if(--x < -136) {</b> coloque um valor e vai verificando 
+    se passa toda mensagem caso nao amente o número e vice-versa<br><br>
+<i>
+#include &#60;Adafruit_GFX.h&#62;<br>
+#include &#60;Adafruit_NeoMatrix.h&#62;<br>
+#include &#60;Adafruit_NeoPixel.h&#62;<br>
+#ifndef PSTR<br>
+ #define PSTR <br>
+#endif<br><br>
+
+#define PIN 6<br><br>
+
+Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(64, 8, PIN,<br>
+  NEO_MATRIX_TOP     + NEO_MATRIX_LEFT + NEO_MATRIX_ZIGZAG +<br>
+  NEO_MATRIX_COLUMNS + NEO_MATRIX_PROGRESSIVE,<br>
+  NEO_GRB            + NEO_KHZ800);<br><br>
+
+const uint16_t colors[] = {<br>
+  matrix.Color(155, 110, 0), matrix.Color(110, 155, 0), matrix.Color(110, 0, 155) };<br><br>
+
+void setup() {<br>
+  matrix.begin();<br>
+  matrix.setTextWrap(false);<br>
+  matrix.setBrightness(40);<br>
+  matrix.setTextColor(colors[0]);<br>
+}<br><br>
+
+int x    = matrix.width();<br>
+int pass = 0;<br><br>
+
+void loop() {<br>
+  matrix.fillScreen(0);<br>
+  matrix.setCursor(x, 0);<br>
+  matrix.print(F("PROJETO LER TAMBEM E VIAJAR"));<br>
+  if(--x < -136) {<br>
+    x = matrix.width();<br>
+    if(++pass >= 3) pass = 0;<br>
+    matrix.setTextColor(colors[pass]);<br>
+  }<br>
+  matrix.show();<br>
+  delay(100);<br>
+}<br><br>
+</i>    
+Desta foma terá o letreiro com a seguinte mensagem <b>PROJETO LER TAMBEM E VIAJAR</b> caso mudar a mensagem 
+basta mudar no campo acima <b>Obs: não colocar acentos, desconfigura</b> 
+<footer>Atualização Dezembro de 2024</footer>
+</body>
+</html>
