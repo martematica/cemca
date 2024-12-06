@@ -3,20 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Robotica</title>
     <link rel="stylesheet" href="estiloaulas.css">
 </head>
 
 <body>
     
     <div></div>
-    <h1>Programação</h1> 
-    <h3>Visita a Foz do Iguaçu</h3>
-Para as conexões basta colocar o GND e uma porta de comunicação, no caso vamos usar a saida 6 <br><br>
+    <h1>Buzzer toca música</h1> 
+    <h3>Buzzer toca Jingle Bells</h3>
+    Os buzzers são dispositivos eletroacústicos que convertem sinais elétricos em ondas sonoras audíveis. 
+    Eles são amplamente utilizados para emitir alertas, notificações ou sinais sonoros em uma variedade 
+    de dispositivos eletrônicos e sistemas. <br>
+    <b>Buzzers Ativos:</b> Incorporam um circuito eletrônico interno que gera o som desejado quando uma corrente elétrica 
+    é aplicada. Eles podem produzir uma variedade de sons diferentes e geralmente têm um volume mais alto do que 
+    os buzzers passivos. <br>
+  <b>Buzzers Passivos:</b> Não possuem circuitos internos e dependem da frequência e amplitude do sinal elétrico 
+  aplicado para produzir som. Eles são mais simples em termos de design e tendem a ser mais baratos, mas podem ter 
+  um volume mais baixo em comparação com os buzzers ativos. <br>
+Para as conexões basta colocar o GND com o sinal de <b>-</b> no buzzer e uma porta de comunicação, no caso vamos usar a 
+saida 8 no sinal de <b>+</b> no buzzer <br><br>
+<img src="Imagens/buzzer1.png" alt=""> <br><br>
 
+Agora basta abrir o programa Arduino IDE e digitar o codigo abaixo e selecionar a porta e salvar 
 
-
-
+<i>
 #define NOTE_B0  31 <br>
 #define NOTE_C1  33 <br>
 #define NOTE_CS1 35<br>
@@ -107,19 +118,19 @@ Para as conexões basta colocar o GND e uma porta de comunicação, no caso vamo
 #define NOTE_D8  4699<br>
 #define NOTE_DS8 4978<br><br>
 
-const int bzr = 11;<br><br>
+const int bzr = 8;<br><br>
 
 int notes[] = {<br>
-	NOTE_E3, NOTE_E3, NOTE_E3, NOTE_E3, NOTE_E3, NOTE_E3,<br> 
-  NOTE_E3, NOTE_G3, NOTE_C3, NOTE_D3, NOTE_E3, NOTE_F3, <br>
-  NOTE_F3, NOTE_F3, NOTE_F3, NOTE_F3, NOTE_E3, NOTE_E3, NOTE_E3,<br> 
-  NOTE_E3, NOTE_E3, NOTE_D3, NOTE_D3, NOTE_E3, NOTE_D3, NOTE_G3,<br>
+	NOTE_E6, NOTE_E6, NOTE_E6, NOTE_E6, NOTE_E6, NOTE_E6,<br> 
+  NOTE_E6, NOTE_G6, NOTE_C6, NOTE_D6, NOTE_E6, NOTE_F6, <br>
+  NOTE_F6, NOTE_F6, NOTE_F6, NOTE_F6, NOTE_E6, NOTE_E6, NOTE_E6,<br> 
+  NOTE_E6, NOTE_E6, NOTE_D6, NOTE_D6, NOTE_E6, NOTE_D6, NOTE_G6,<br>
   <br>
-  NOTE_E3, NOTE_E3, NOTE_E3, NOTE_E3, NOTE_E3, NOTE_E3,<br> 
-  NOTE_E3, NOTE_G3, NOTE_C3, NOTE_D3, NOTE_E3,<br>
-  NOTE_F3, NOTE_F3, NOTE_F3, NOTE_F3, NOTE_F3, NOTE_E3,<br>
-  NOTE_E3, NOTE_E3, NOTE_E3, NOTE_G3, NOTE_G3, NOTE_F3, NOTE_D3,<br> 
-  NOTE_C3<br>
+  NOTE_E6, NOTE_E6, NOTE_E6, NOTE_E6, NOTE_E6, NOTE_E6,<br> 
+  NOTE_E6, NOTE_G6, NOTE_C6, NOTE_D6, NOTE_E6,<br>
+  NOTE_F6, NOTE_F6, NOTE_F6, NOTE_F6, NOTE_F6, NOTE_E6,<br>
+  NOTE_E6, NOTE_E6, NOTE_E6, NOTE_G6, NOTE_G6, NOTE_F6, NOTE_D6,<br> 
+  NOTE_C6<br>
 };<br><br>
 
 int times[] = {<br> 
@@ -150,60 +161,7 @@ void loop()<br>
   song();<br>
   delay(3000);<br>
 }<br>
-
-<b>Ou também este codigo</b>
-<br><br>
-codigo Buzzer<br><br> 
-
-int SONG = 6;
-int GREEN = 7;
-int ORANGE = 8;
-int RED = 9;
-int WHITE = 10;
-int BLUE = 11;
-int YELLOW = 12;
-int GREEN2 = 13;
-
-int interval = 200;
-char chords[] = "EEEEEEEGCDE FFFFFEEEEDDEDG";
-int duration[] = {1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2};
-
-void setup() {
-pinMode(SONG, OUTPUT);
-pinMode(GREEN, OUTPUT);
-pinMode(ORANGE, OUTPUT);
-pinMode(WHITE, OUTPUT);
-pinMode(BLUE, OUTPUT);
-pinMode(RED, OUTPUT);
-pinMode(YELLOW, OUTPUT);
-pinMode(GREEN2, OUTPUT);
-}
-
-void loop() {
-for (int i = 0; i <= sizeof(chords) - 1; i++) {
-if (chords[i] == ' ') {
-  delay(duration[i] * interval);
-} else {
-  playToneAndLed(chords[i], duration[i] * interval);
-}
-delay((interval * 2)*duration[i]);
-}
-}
-
-void playToneAndLed(char note, int duration) {
-char notesName[] = { 'C', 'D', 'E', 'F', 'G', 'A', 'B' };
-int tones[] = { 261, 293, 329, 349, 392, 440, 494 };
-int leds[] = {GREEN, ORANGE, RED, WHITE, BLUE, YELLOW, GREEN2 };
-
-for (int i = 0; i <= sizeof(tones); i++) {
-if (note == notesName[i]) {
-  tone(SONG, tones[i], duration);
-  digitalWrite(leds[i], HIGH);
-  delay(duration);
-  digitalWrite(leds[i], LOW);
-}
-}
-}
+</i>
 
 
 
