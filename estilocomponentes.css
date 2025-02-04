@@ -2,6 +2,10 @@ body{
     margin-left:5%;
     margin-right:5%;
 }
+.TopMat{ background-image: url(Imagens/matequações.jpeg);
+    height: 90px;
+    border-radius:10px;
+}
 .TopEdFinanceira{
     background-image:url(Imagens/logoedfinanceira.avif);
     height:90px;
