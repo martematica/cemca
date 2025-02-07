@@ -2,7 +2,8 @@ body{
     margin-left:5%;
     margin-right:5%;
 }
-.TopMat{ background-image: url(Imagens/matequações.jpeg);
+.TopMat{ 
+    background-image: url(Imagens/matequações.jpeg);
     height: 90px;
     border-radius:10px;
 }
