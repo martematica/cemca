@@ -1,3 +1,34 @@
+.TopEdFinanceira{
+    background-image:url(Imagens/logoedfinanceira.avif);
+    height:90px;
+    border-radius:10px;
+}
+.TopProgramação{
+    background-image:url(Imagens/programação.jpeg);
+    height:90px;
+    border-radius:10px;
+}
+.TopMatemática{ 
+    background-image: url(Imagens/matequações.jpeg);
+    height: 90px;
+    border-radius:10px;
+}
+
+.TopRobóticaEF{
+    background-image: url(Imagens/cabeçalhoroboticapp1.jpeg);
+    height: 90px;
+    border-radius: 10px;
+}
+.TopRobóticaEM{
+    background-image: url(Imagens/robo.jpg);
+    height: 90px;
+    border-radius:10px;
+}
+.TopFísica{
+    background-image: url(Imagens/fisica.webp);
+    height: 90px;
+    border-radius:10px;
+}
 div{
     height:50px;border-radius:10px;
     background-image:url(robo.jpg);

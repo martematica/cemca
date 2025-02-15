@@ -1,10 +1,27 @@
+button{
+    width:30%;
+    height:15%;
+    background-image: url(Imagens/relogio.jpg);
+    border-radius: 15px;
+    margin: 1.2%;
+    min-width:200px;
+    font-size:100%;
+}
+button:hover
+{
+    background-image: url(Imagens/programação.jpeg);
+    border:solid;
+    border-color: red;
+    color:red;
+}
+
 body{
     margin-left:5%;
     margin-right:5%;
 }
-.TopMat{ 
-    background-image: url(Imagens/matequações.jpeg);
-    height: 90px;
+.TopEtnofísica{
+    background-image:url(Imagens/etnofisicaindigena.png);
+    height:90px;
     border-radius:10px;
 }
 .TopEdFinanceira{
@@ -17,26 +34,28 @@ body{
     height:90px;
     border-radius:10px;
 }
-.TopRobótica{
+.TopMatemática{ 
+    background-image: url(Imagens/matequações.jpeg);
+    height: 90px;
+    border-radius:10px;
+}
+
+.TopRobóticaEF{
     background-image: url(Imagens/cabeçalhoroboticapp1.jpeg);
     height: 90px;
     border-radius: 10px;
 }
-.TopRobóticaII{
+.TopRobóticaEM{
     background-image: url(Imagens/robo.jpg);
     height: 90px;
     border-radius:10px;
 }
-.TopFísicaII{
-    background-image: url(Imagens/robo.jpg);
+.TopFísica{
+    background-image: url(Imagens/fisica.webp);
     height: 90px;
     border-radius:10px;
 }
-.TopProgramação{
-    background-image:url(Imagens/programação.jpeg);
-    height:90px;
-    border-radius:10px;
-}
+
 a{
     font-size: x-large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
