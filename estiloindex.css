@@ -20,7 +20,6 @@ img{
     background-image: url(Imagens/relogio.jpg);
     border-radius: 15px;
     margin: 1.2%;
-    min-width:200px;
     font-size:55%;
 }
 .b1:hover
