@@ -1,10 +1,10 @@
 
 .Top{
-    background-image:url(Imagens/programação.jpeg);
+    background-image:url(programação.jpeg);
     height:100px;
     border-radius:10px 10px 0px 0px;
 }
-table{
+.tabela{
     border:solid;
 }
 .div1{
