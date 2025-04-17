@@ -104,3 +104,9 @@ footer{
     font-size: medium;
     text-align: right;
 }
+@media(max-width: 500px) { 
+    img{width: 100px;}
+    a{width: 350px;}
+    .b1{width: 350px;}
+    
+}
