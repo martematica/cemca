@@ -91,6 +91,6 @@ video{
 iframe{width: 1050px;height: 600px; border-radius: 10px;}
 
 @media (max-width:500px) {
-    iframe{width: 350px; height: 200px;}
-    img{width: 350px;}
+    iframe{width: 320px; height: 200px;}
+    img{width: 320px;}
 }
