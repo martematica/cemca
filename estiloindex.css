@@ -9,6 +9,7 @@
 }
 .div1{
     background-image:url(Imagens/logoEA.png);
+    max-width: 2240px;
 }
 img{
     border-radius:100px;
@@ -52,6 +53,7 @@ body
     word-spacing: 20%;
     margin: 1%;
     font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    max-width: 2240px;
 }
 h1
 {
