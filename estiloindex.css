@@ -108,3 +108,9 @@ footer{
     font-size: medium;
     text-align: right;
 }
+@media(max-width:1000px) {
+    .b1{width: 90%;height: 60%;} 
+    img{width: 50px;}
+    .div1{display: flex; flex-direction: column;}               
+    p{font-size: large;}   
+}
