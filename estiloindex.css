@@ -10,14 +10,16 @@
 .div1{
     background-image:url(Imagens/logoEA.png);
     max-width: 2240px;
+    display: flex;
+    flex-wrap: wrap;
 }
 img{
     border-radius:100px;
 }
 .b1
 {
-    width:30%;
-    height:15%;
+    width:440px;
+    height:30px;
     background-image: url(Imagens/relogio.jpg);
     border-radius: 15px;
     margin: 1.2%;
@@ -105,10 +107,4 @@ footer{
     font-family: 'Courier New', Courier, monospace;
     font-size: medium;
     text-align: right;
-}
-@media(max-width: 500px) { 
-    img{width: 100px;}
-    a{width: 350px;}
-    .b1{width: 350px;}
-    
 }
