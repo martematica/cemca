@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martematica</title>
+    <link rel="stylesheet" href="estiloaulas.css">
+
+</head>
+<body>
+<h1>Sensor IR Remote</h1>
+Um detector de infravermelho reage à radiação infravermelha (ou IR, do termo em inglês Infrared radiation). Os dois tipos principais de detectores são térmico e fotônico (fotodetectores).
+
+Os efeitos térmicos da radiação IR incidente podem ser caracterizados por muitos fenômenos dependentes da temperatura. 
+Bolômetros e microbolômetros são baseados em mudanças na resistência. Termopares e termopilhas usam o efeito termoelétrico. 
+As células de Golay seguem a expansão térmica. Nos espectrômetros de infravermelho, os detectores piroelétricos são os mais comuns. <br>
+<img src="Imagens/sensorIR.webp" alt="Sensor IR remote"><br>
+<img src="Imagens/sensorIR3.webp" alt="Sensor IR remote"><br>
+O sensor possui 3 pinos, o central positivo (5v), lado esquerdo negativo (GND), lado direito sinal de saida (OUT)<br>
+<img src="Imagens/sensorIR2.webp" alt="Sensor IR remote"> <br>
+ Para esta programação precisa-se de da biblioteca do sensor IRremote que pode ser adiquirido no link abaixo <br> 
+<a href="https://www.arduinolibraries.info/libraries/i-rremote">Baixar a biblioteca IR remote</a> <br>
+
+<h6>#include &lt;IRremote.h &gt; <br>
+
+    int pino_receptor = 7; <br> <br>
+    
+    void setup() <br>
+    { <br>
+      Serial.begin(9600);<br>
+    
+      IrReceiver.begin(pino_receptor); <br>
+    
+      Serial.println("Pressione 4 opções de teclas");<br>
+    
+      Serial.println(""); <br>
+    
+      for(int tecla = 1; tecla &lt; = 4; tecla++)  <br>
+      {  <br>
+        while(!IrReceiver.decode()){} <br>
+    
+        Serial.print("Código hexadecimal da tecla"); <br>
+        Serial.print(tecla); <br>
+        Serial.print(": "); <br>
+        Serial.println(IrReceiver.decodedIRData.decodedRawData, HEX); <br>
+        delay(600); <br>
+        IrReceiver.resume(); <br>
+      } <br>
+        Serial.println(""); <br>
+    } <br>
+    void loop(){} <br> 
+         </h6>
+Agora basta programar e coletar os codigo hexadecimal das teclas do controle indo em <b>Ferramentas</b> e <b>Monitor serial</b><br>
+<img src="Imagens/sensorIR5.png" alt="Sensor IR remote"><br>
+e colocar na próxima programação <br><br><br>
+<footer>Atualizado em maio de 2025</footer>
+</body>
+</html>
