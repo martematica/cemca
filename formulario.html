@@ -8,7 +8,7 @@
     <style>
         input{width:auto; height: 20px;}
         select{background-color: rgb(29, 26, 226); height:20px;}
-        textarea{width:400px;height: 50px}
+        textarea{width:900px;height: 600px}
         .enviar{background-color: rebeccapurple;margin-left:2%; height: 40px;}
     </style>
 </head>
@@ -16,11 +16,7 @@
  <div class="TopRobóticaEF"></div>
     <h1>Incrição Robótica</h1>
     <form  action="https://api.sheetmonkey.io/form/7vEyPt1XhTRmdb86ewZo98" method="post">
-        <label>Nome do aluno: <input type="text" name="Name" required /></label> <br><br>
-        <label>Email @escola: <input type="email" name="Email" required /></label> <br><br>
-        <label>Turma Robótica<select name="Turma"><option>Ensino Fundamental 1° serie</option><option>Ensino Fundamental 2° serie</option><option>Ensino Médio 1° serie</option></select></label> <br><br>
-        <label>Você já participou da Robótica ano passado?<input type="radio" name="Você já participou da Robótica ano passado?" value="Sim" />Sim <input type="radio" name="Você já participou da Robótica ano passado?" value="Não" /> Não</label> <br><br>
-        <label>O que você espera da Robótica para este ano? <br><textarea name="O que você espera da Robótica para este ano?" placeholder="Deixe aqui sua expectativa"></textarea></label> <br><br>
+        <label>Programação<br><textarea name="Programação?" placeholder="Deixe aqui sua expectativa"></textarea></label> <br><br>
         <input type="hidden" name="data e hora" value="x-sheetmonkey-current-date-time" /> <br><br>
         <input class="enviar" type="submit" value="Enviar Inscrição" /> <input class="enviar" type="reset" value="Limpar Tudo"> <br><br><br><br>
       </form>
