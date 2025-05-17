@@ -7,54 +7,82 @@
     <link rel="stylesheet" href="estiloaulas.css">
 
 </head>
-<body>
-<h1>Sensor IR Remote</h1>
-Um detector de infravermelho reage à radiação infravermelha (ou IR, do termo em inglês Infrared radiation). Os dois tipos principais de detectores são térmico e fotônico (fotodetectores).
+<body> 
+<h1>Sensor IR Remote conctado com relé 5V</h1>
 
-Os efeitos térmicos da radiação IR incidente podem ser caracterizados por muitos fenômenos dependentes da temperatura. 
-Bolômetros e microbolômetros são baseados em mudanças na resistência. Termopares e termopilhas usam o efeito termoelétrico. 
-As células de Golay seguem a expansão térmica. Nos espectrômetros de infravermelho, os detectores piroelétricos são os mais comuns. <br>
-<img src="Imagens/sensorIR.webp" alt="Sensor IR remote"><br>
-<img src="Imagens/sensorIR3.webp" alt="Sensor IR remote"><br>
-O sensor possui 3 pinos, o central positivo (5v), lado esquerdo negativo (GND), lado direito sinal de saida (OUT)<br>
-<img src="Imagens/sensorIR2.webp" alt="Sensor IR remote"> <br>
-sinal de troca de informação OUT vamos liga-lo na saida do arduino 7 veja abaixo<br>
-<img src="Imagens/montangemsensorirremote.png" alt="Sensor IR remote"><br>
- Para esta programação precisa-se de da biblioteca do sensor IRremote que pode ser adiquirido no link abaixo <br> 
-<a href="https://www.arduinolibraries.info/libraries/i-rremote">Baixar a biblioteca IR remote</a> <br>
+O relé representa um tipo de dispositivo eletromecânico que opera como um interruptor. A energização da bobina do relé por meio de corrente contínua 
+(CC) possibilita a ativação dos contatos, permitindo que sejam alternados entre a posição aberta ou fechada. Um módulo de relé de canal único de 5V 
+tipicamente incorpora uma bobina juntamente com dois contatos, os quais são identificados como normalmente aberto (NA) e normalmente fechado (NC) <br><br>
 
-<h6>#include &lt;IRremote.h &gt; <br>
+<img src="Imagens/rele5v.png" alt="Relé 5v"><br>
 
-    int pino_receptor = 7; <br> <br>
+Neste caso vamos usar um rele duplo do kit da robótica para além de permitir uma ligação com mais energia que a do arduino, conseguir também uma 
+inversão de corrente do motor DC  <br> 
+Para isso vamos conectar <b>VCC</b> do relé no <b>5v</b> do arduino, <b>GND</b> com <b>GND</b> e <b>In1</b> e <b>In2</b> do relé nas portas <b>8</b> 
+e <b>9</b> do arduino Junto com a montagem da aula anterior<br><br>
+
+na parte de saida do relé temos 6 saidas da esquerda para direita a 2° e 5° cococamos os negativos e positivo das pilhas, na 1° e 6° negativo e positivo 
+do motor com um jumper extra cada, estes jumper extra vão ser conectados o negativo na 4° e positivo na 3° desta forma poderemos fazer a inversão de corrente <br><br> 
+
+<h6>#include  &lt; IRremote.h &gt; <br><br>
+
+
+int Pino_receptor = 7;<br><br>
+
+float armazenavalor;<br><br>
+
+int motor1f = 8;<br>
+int motor1t = 9;<br><br><br>
+
+
+unsigned long tecla_1 = 0xBA45FF00;<br>
+unsigned long tecla_2 = 0xB946FF00;<br>
+unsigned long tecla_3 = 0xB847FF00;<br><br>
+
+void setup() <br>
+{ <br>
+  IrReceiver.begin(Pino_receptor); <br>
+  pinMode(motor1f, OUTPUT); <br>
+  pinMode(motor1t, OUTPUT); <br><br>
+  
+} <br>
+void loop() <br>
+{ <br><br>
+  
+  if (IrReceiver.decode()) <br>
+  {<br><br>
     
-    void setup() <br>
-    { <br>
-      Serial.begin(9600);<br>
+    armazenavalor = IrReceiver.decodedIRData.decodedRawData;<br><br>
     
-      IrReceiver.begin(pino_receptor); <br>
+    if (armazenavalor == tecla_1) <br>
+    { <br><br>
+     
+      digitalWrite(motor1f, HIGH); <br>
+      digitalWrite(motor1t, LOW); <br>
+    } <br><br>
     
-      Serial.println("Pressione 4 opções de teclas");<br>
+    if (armazenavalor == tecla_2) <br>
+    { <br><br>
+      
+      digitalWrite(motor1f, LOW); <br>
+      digitalWrite(motor1t, HIGH); <br>
+    } <br><br>
     
-      Serial.println(""); <br>
+    if (armazenavalor == tecla_3) <br>
+
+    { <br><br>
+     
+      digitalWrite(motor1f, LOW); <br>
+      digitalWrite(motor1t, LOW); <br>
+      
+    } <br><br>
     
-      for(int tecla = 1; tecla &lt;= 4; tecla++)  <br>
-      {  <br>
-        while(!IrReceiver.decode()){} <br>
-    
-        Serial.print("Código hexadecimal da tecla"); <br>
-        Serial.print(tecla); <br>
-        Serial.print(": "); <br>
-        Serial.println(IrReceiver.decodedIRData.decodedRawData, HEX); <br>
-        delay(600); <br>
-        IrReceiver.resume(); <br>
-      } <br>
-        Serial.println(""); <br>
-    } <br>
-    void loop(){} <br> 
-         </h6>
-Agora basta programar e coletar os codigo hexadecimal das teclas do controle indo em <b>Ferramentas</b> e <b>Monitor serial</b><br>
-<img src="Imagens/sensorIR5.png" alt="Sensor IR remote"><br>
-e colocar na próxima programação <br><br><br>
+    IrReceiver.resume(); <br>
+  } <br>
+} <br>
+	</h6>
+
+<br><br><br>
 <footer>Atualizado em maio de 2025</footer>
 </body>
 </html>
