@@ -22,7 +22,90 @@ Eles podem ser encontrados em diferentes formatos e funcionalidades, incluindo o
 para exaustor iremos usar um cooler de computador <br>
 <img src="Imagens/cooler.jpeg" alt=""><br><br>
 
-<h2>Programação</h2>
+<h2>Programação sensor de Temperratura</h2>
+<h6>#include &lt;IRremote.h&gt; <br><br>
+
+int Sensor_LDR = 0; <br>
+int Pin_LDR = A2;<br>
+int Pin_LED = 5;<br>
+int Pino_receptor = 7;<br>
+int motor1f = 8;<br>
+int motor1t = 9;<br><br>
+
+const int LM35 = A0; <br>
+const int led = A1;<br><br>
+
+float armazenavalor; <br>
+float Temperatura = 0;<br><br>
+
+unsigned long tecla_1 = 0xBA45FF00; <br>
+unsigned long tecla_2 = 0xB946FF00;<br>
+unsigned long tecla_3 = 0xB847FF00;<br><br>
+
+void setup() { <br><br>
+  
+Serial.begin(9600);  <br><br>
+pinMode(Pin_LED, OUTPUT);<br>
+pinMode(Pin_LDR, INPUT);<br>
+pinMode(led, OUTPUT); <br>
+pinMode(LM35, INPUT); <br>
+pinMode(motor1f, OUTPUT);<br>
+pinMode(motor1t, OUTPUT); <br><br>
+  
+IrReceiver.begin(Pino_receptor);<br>
+}<br><br>
+
+void loop() {<br>
+ Sensor_LDR = analogRead(Pin_LDR);<br> 
+Serial.println(Sensor_LDR); <br>
+delay(100);<br>
+if(Sensor_LDR &lt; 800){<br> 
+digitalWrite(Pin_LED, HIGH);<br> 
+}else{ <br>
+digitalWrite(Pin_LED, LOW);<br> 
+}<br><br>
+if (IrReceiver.decode())<br>
+{<br>
+
+armazenavalor = IrReceiver.decodedIRData.decodedRawData;<br>
+<br>
+if (armazenavalor == tecla_1)<br>
+{<br>
+
+digitalWrite(motor1f, HIGH);<br>
+digitalWrite(motor1t, LOW);<br>
+}<br>
+
+if (armazenavalor == tecla_2)<br>
+{<br>
+
+digitalWrite(motor1f, LOW);<br>
+digitalWrite(motor1t, HIGH);<br>
+}<br>
+<br>
+if (armazenavalor == tecla_3)<br>
+{<br>
+
+digitalWrite(motor1f, LOW);<br>
+digitalWrite(motor1t, LOW);<br>
+}<br>
+
+IrReceiver.resume();<br><br>
+} <br>
+Temperatura = (float(analogRead(LM35)) * 5 / 1023) * 50;<br>
+Serial.print("Temperatura: ");<br>
+Serial.print(Temperatura);<br>
+Serial.println("°C");<br>
+<br>
+  if (Temperatura &gt; 40){<br>
+    digitalWrite(led, HIGH);<br>
+  }else{<br>
+    digitalWrite(led, LOW);<br>
+  }<br>
+  delay(2000);<br>
+}<br><br><br>
+</h6>
+
 <footer>Atualizado Março de 2025</footer>
 </body>
 </html>
