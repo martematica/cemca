@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotica</title>
+    <link rel="stylesheet" href="estiloaulas.css">
+</head>
+
+<body>
+    
+    <div></div>
+    <h1>Painel Letreiro</h1> 
+    <h3>Painel de LEDs 8x32</h3>
+
+    Os LEDs endereçáveis ​​são uma nova geração de LEDs, pois incluem um chip controlador, geralmente o WS2812,
+     que permite acessar vários LEDs com um único pino digital, atribuindo um endereço a cada LED e fornecendo 
+     uma comunicação por fio. <br>
+     Os paineis de Leds endereçaveis são organizados em foma de zig zag de 8 em 8 leds formando uma matrix 8x32, 
+     com duas podemos fomar um letreiro <br>
+     A conexão é simples temos um <b>GND</b>, um <b>5v</b> e um sinal de comunicação <b>D0</b> que ligaremos no porta 6 <br>
+
+     <img src="Imagens/letreiro.png" alt=""> <br>
+<i>
+     #include <IRremote.h> <br>
+#include <LedControl.h> <br><br>
+
+const int receptorIR = 11; <br>
+IRrecv irrecv(receptorIR); <br>
+decode_results results; <br><br>
+
+const int numLeds = 8; <br>
+const int numCols = 64; <br>
+LedControl lc = LedControl(12, 11, 10, numLeds); <br><br>
+
+void setup() { <br>
+  Serial.begin(9600); <br>
+  irrecv.enableIRIn(); <br><br>
+  
+  for (int i = 0; i < numLeds; i++) { <br>
+    lc.shutdown(i, false); <br>
+    lc.setIntensity(i, 8); <br>
+    lc.clearDisplay(i); <br>
+  } <br>
+} <br><br>
+
+void loop() {<br>
+  if (irrecv.decode(&results)) {<br>
+    Serial.println(results.value); <br><br>
+    
+    switch (results.value) {<br>
+      case 0xFFA25D: <br>
+        exibirMensagem("OLA");
+        break;
+      case 0xFF629D: <br>
+        exibirMensagem("ARDUINO");
+        break;
+      case 0xFFE21D: <br>
+        limparMatriz();<br>
+        break;<br>
+    }<br><br>
+    
+    irrecv.resume(); <br>
+  }<br>
+}<br><br>
+
+void exibirMensagem(char *mensagem) {<br>
+  for (int i = 0; i < strlen(mensagem); i++) {<br>
+    char c = mensagem[i];<br>
+    exibirLetra(c);<br>
+    delay(500); <br>
+  } <br>
+}<br>
+
+void exibirLetra(char c) {<br>
+  switch (c) {<br>
+    case 'A':<br>
+      lc.setRow(0, 0x01);<br>
+      lc.setRow(1, 0x02);<br>
+      lc.setRow(2, 0x04);<br>
+      lc.setRow(3, 0x08);<br>
+      lc.setRow(4, 0x10);<br>
+      lc.setRow(5, 0x20);<br>
+      lc.setRow(6, 0x40);<br>
+      lc.setRow(7, 0x80);<br>
+      break;<br>
+    case 'B':<br><br>
+      
+      break;<br>
+    
+  }<br>
+}<br><br>
+
+void limparMatriz() {<br>
+  for (int i = 0; i < numLeds; i++) {<br>
+    lc.clearDisplay(i);<br>
+  }<br>
+}<br><br>
+</i>
+
+Desta foma terá o letreiro com a seguinte mensagem <b>PROJETO LER TAMBEM E VIAJAR</b> caso mudar a mensagem 
+basta mudar no campo acima <b>Obs: não colocar acentos, desconfigura</b> 
+<footer>Atualização Dezembro de 2024</footer>
+</body>
+</html>
