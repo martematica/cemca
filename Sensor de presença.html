@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martematica</title>
+    <link rel="stylesheet" href="estiloaulas.css">
+    <link rel="shortcut icon" href="Imagens/Tesserato.gif" type="image/x-icon">
+</head>
+
+<body>
+    
+    <div></div>
+    <h1>Sensor de presença</h1>
+O funcionamento do Sensor de Obstáculo IR é simples e ocorre da seguinte maneira: o LED emissor permanece constantemente
+emitindo radiação infravermelha com o terminal D0 em nível lógico
+alto (5 V) e, quando encontra um obstáculo em seu raio de ação, é
+refletida e detectada pelo fotorreceptor, o qual envia a informação
+para CI comparador, colocando o pino D0 em nível lógico baixo (0 V)
+e ligando o LED detector de obstáculos. <br>
+<img src="Imagens/sensorpresença.png" alt="Sensor de Presença"> <br>
+também temos o potenciômetro para calibra esta leitura para mais ou menos sensivel esta percepição de presença <br>
+Aqui vemos a montagem onde para percepição de algo acende o LEDs 
+<img src="Imagens/sensordepreseça2.png" alt="Sensor de Presença"> <br>
+Podemos trocar este led por um rele 5v e ligar varios outro equipamentos como luz em corredores escuros, em elevadores portão eletrico como em 
+porta de shopping e etc ...
+<br>
+Programação basta criar uma variavel chamada <b>sensor_IR</b> e seguir os blocos abaixo:
+<img src="Imagens/sensorpresença3.png" alt="Sensor presença"> <br> <br><br><br>
+
+
+
+<footer>Atualização Agosto de 2024</footer>
+</body>
+</html>
