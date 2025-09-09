@@ -47,7 +47,30 @@ potenciômtro são resistores reguláveis como o proprio servo motor tem em si u
 Agora novamente basta ir em <b>Arquivos</b> depois em <b>Exemplos</b> depois em <b>Servo</b> e finalmente em <b>Sweep</b> 
 <br><img src="Imagens/servo4.jpeg" alt="Servo motores"> <br>
 Assim teremos um controle para os servos motores, agora tente você adicionar mais servos motores para se fazer um braço Robótico <br>
+Segue a programação : <br><br>
+<b>
+    #include <Servo.h> <br><br>
 
+Servo myservo;  <br><br>
+
+int pos = 0; <br><br>
+
+void setup() { <br>
+  myservo.attach(9); <br> 
+  } <br><br>
+
+void loop() { <br>
+  for (pos = 0; pos <= 180; pos += 1) {  <br> <br>
+    
+    myservo.write(pos);              <br>
+    delay(15);                        <br>
+    } <br>
+  for (pos = 180; pos >= 0; pos -= 1) { <br>
+    myservo.write(pos);              <br>
+    delay(15);                       <br>
+  } <br>
+} <br>
+</b>
 <br><br><br><br>
 
 
