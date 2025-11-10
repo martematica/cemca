@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robótica</title>
+    <link rel="stylesheet" href="estiloaulas.css">
+</head>
+<style>
+    .sensor{width:200px;}
+    .prog{width:500px;}
+</style>
+<body>
+    
+    <div></div>
+    <h1>Robótica</h1> 
+    Código da Sala Tinkercard: NCR-NDB-R7K 
+    <h3>Sensor umidade e temperatura lcd</h3>
+    A técnica de irrigação automática consiste no fornecimento de
+água ao solo em quantidade ideal, de modo a garantir a sobrevivência
+e produtividade das plantas presentes nesse. <br>
+Outro fator importante é a tempertura desta forma vamos usar o sensor LM35
+<h3>Lista de materiais</h3>
+<ul>
+    <li>Placa arduino R3 uno</li>
+    <li>Cabo USB</li>
+    <li>Sensor LM35</li>
+    <li>Sensor umidade do solo</li>
+    <li> Notebook com Software Arduino IDE</li>
+    
+</ul>
+
+Para as plantas, a necessidade de água é sinalizada quando os
+tecidos vegetais se tornam murchos e as folhas se fecham. Quando isso
+acontece, elas precisam absorver do substrato em que se encontram
+(aquático ou terrestre) a quantidade de água necessária para seu
+desenvolvimento. <br>
+Sensor de Umidade do Solo, aprendemos que este
+sensor permite, através do método de medição de quantidade de água
+por resistência elétrica, detectar a umidade do solo, informando se há
+ou não necessidade de irrigação. <br>
+<img class="sensor" src="Imagens/Sensor de umidade do solo.png" alt="Sensor de umidade do solo"> <br>
+Com a sonda espetada no solo seco, o sensor detectará uma baixa umidade
+(abaixo de 45%) e acionará o funcionamento da Bomba (Motor DC) através da
+ativação do Módulo Relé. À medida que for sendo adicionada água
+neste solo, o sensor identificará no solo a umidade ideal, conforme
+determinado na programação (acima de 45%), desligando o Módulo
+Relé, consequentemente, a Bomba (Motor DC). <br>
+<h3>Display LCD</h3>
+<img src="Imagens/DisplayLCD16x2.png" alt="Display LDC"> <br>
+<h3>Sensor temperatura</h3>
+<img src="Imagens/sensortemperatura.jpeg" alt="Sensor temperatura"> <br>
+    <h4>Montagem</h4> 
+<img src="Imagens/sensor umidade e temperatura lcd.png" alt="sensor umidade e temperatura lcd"> <br>
+    <h4>Programação</h4>
+    <img class="prog" src="Imagens/sensor umidade e temperatura lcd2.png" alt="sensor umidade e temperatura lcd"> <br>
+
+
+    <footer>Atualização Novembro de 2024</footer>
+</body>
+</html>
