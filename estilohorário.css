@@ -29,3 +29,7 @@ footer{
     font-size:medium;
     font-family: 'Courier New', Courier, monospace;
 }
+
+i{
+    color: red;
+}
