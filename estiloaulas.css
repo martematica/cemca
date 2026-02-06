@@ -53,6 +53,11 @@ h2{
 h3{
     font-size:30px;
 }
+h4{
+    border: solid;
+    background-color: bisque;
+}
+
 img{
     margin-left:0%;
     border-radius:10px;
@@ -95,4 +100,15 @@ iframe{width: 1050px;height: 600px; border-radius: 10px;}
     img{width: 320px;}
 }
 details{color:black;font-style: italic;}
+
 summary{color:blue;font-style: normal;}
+
+.math{ 
+    text-align: center; 
+    font-size:larger;
+    font-family:cursive;
+}
+sub{
+    font-size: medium;
+}
+
