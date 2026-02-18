@@ -20,10 +20,12 @@ body{
     margin-right:10%;
 }
 .TopProgramaseplataformas{
-    height:auto;
+    background-image: url(Imagens/programas\ e\ plataformas.png);
+    background-size: 50%;
+    height:90px;
     border-radius:10px;
-    background-position: center;
-    text-align: center;
+    border: solid;
+   
 }
 .TopEtnofísica{
     background-image:url(Imagens/etnofisicaindigena.png);
