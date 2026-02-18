@@ -5,7 +5,7 @@ let hoursRadius;
 let clockDiameter;
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(710, 710);
   stroke(255);
   angleMode(DEGREES);
 
@@ -20,16 +20,16 @@ function setup() {
 }
 
 function draw() {
-  background(230);
+  background(27,27,27);
 
   // Move origin to center of canvas
   translate(width / 2, height / 2);
 
   // Draw the clock background
   noStroke();
-  fill(244, 122, 158);
+  fill(120, 120, 120);
   ellipse(0, 0, clockDiameter + 25, clockDiameter + 25);
-  fill(237, 34, 93);
+  fill(37, 37, 37);
   ellipse(0, 0, clockDiameter, clockDiameter);
 
   // Calculate angle for each hand
@@ -40,6 +40,7 @@ function draw() {
   stroke(255);
 
   // Second hand
+  
   push();
   rotate(secondAngle);
   strokeWeight(1);
@@ -56,7 +57,7 @@ function draw() {
   // Hour hand
   push();
   strokeWeight(4);
-  rotate(hourAngle);
+  rotate(hourAngle + (minuteAngle/12));
   line(0, 0, 0, -hoursRadius);
   pop();
 
@@ -68,4 +69,20 @@ function draw() {
     rotate(6);
   }
   pop();
+  fill(220,220,220);
+  textSize(30);
+  text('12',-17,-270);
+  text('1',130,-230);
+  text('11',-155,-235);
+  text('5',130,250);
+  text('7',-145,255);
+  text('6',-7,290);
+  text('3',270,10);
+  text('9',-290,10);
+  text('2',235,-130);
+  text('4',230,150);
+  text('8',-255,145);
+  text('10',-260,-130);
+
+
 }
