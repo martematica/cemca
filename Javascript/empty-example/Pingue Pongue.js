@@ -1,24 +1,24 @@
 let paddleLeftX = 20;
-let paddleLeftY = 200;
+let paddleLeftY = 350;
 
-let paddleRightX = 380;
-let paddleRightY = 200;
+let paddleRightX = 680;
+let paddleRightY = 350;
 
 let paddleSpeed = 2;
-let paddleHeight = 80;
-let paddleWidth = 10;
+let paddleHeight = 120;
+let paddleWidth = 20;
 
 let leftScore = 0;
 let rightScore = 0;
 
-let ballPosX = 200;
-let ballPosY = 200;
+let ballPosX = 350;
+let ballPosY = 350;
 let ballSpeedX = 0;
 let ballSpeedY = 0;
-let ballSize = 10;
+let ballSize = 20;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(700, 700);
 
   // Draw rectangles from their center
   // This makes it easier to check whether the ball is above or below the

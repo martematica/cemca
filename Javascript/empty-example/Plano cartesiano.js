@@ -2,7 +2,7 @@ let x = 0;
 let y = 0;
 
 function setup() {
-  createCanvas(900, 900);
+  createCanvas(1000, 720);
   background(220);
   // Desenhar os eixos
   stroke(0);
@@ -12,8 +12,8 @@ function setup() {
   for (let i = -50; i <= 50; i++) {
     line(width / 2 + i * 50, height / 2 - 5, width / 2 + i * 50, height / 2 + 5); // Marcações no eixo x
     line(width / 2 - 5, height / 2 + i * 50, width / 2 + 5, height / 2 + i * 50); // Marcações no eixo y
-    text(i, width / 2 + i * 50 - 10, height / 2 + 20); // Números no eixo x
-    text(i, width / 2 - 20, height / 2 + i * 50 + 5); // Números no eixo y
+    text(i, width / 2 + i * 50 - 5, height / 2 + 20); // Números no eixo x
+    text(-i, width / 2 - 20, height / 2 + i * 50 + 5); // Números no eixo y
   }
 }
 
@@ -23,8 +23,7 @@ function draw() {
   noStroke();
   ellipse(width / 2 + x * 50, height / 2 - y * 50, 10, 10);
   fill(0,0,0);
-  quad(0,0,width,0,width,height/2-30,0,height/2-30);
-  quad(0,0,0,height,width/2-30,height,width/2-30,0);
+  
 }
 
 function mousePressed() {
