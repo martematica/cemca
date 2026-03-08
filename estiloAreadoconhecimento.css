@@ -1,0 +1,84 @@
+button{
+    width:30%;
+    height:15%;
+    background-image: url(Imagens/relogio.jpg);
+    border-radius: 15px;
+    margin: 1.2%;
+    min-width:200px;
+    font-size:100%;
+}
+button:hover
+{
+    background-image: url(Imagens/programação.jpeg);
+    border:solid;
+    border-color: red;
+    color:red;
+}
+
+body{
+    margin-left:10%;
+    margin-right:10%;
+}
+.TopProgramaseplataformas{
+    background-image: url(Imagens/programas\ e\ plataformas.png);
+    background-size: 50%;
+    height:90px;
+    border-radius:10px;
+    border: solid;
+   
+}
+.TopEtnofísica{
+    background-image:url(Imagens/etnofisicaindigena.png);
+    background-size: 100%;
+    height:90px;
+    border-radius:10px;
+}
+.TopEdFinanceira{
+    background-image:url(Imagens/logoedfinanceira.avif);
+    height:90px;
+    border-radius:10px;
+}
+.TopProgramação{
+    background-image:url(Imagens/programação.jpeg);
+    height:90px;
+    border-radius:10px;
+}
+.TopMatemática{ 
+    background-image: url(Imagens/matequações.jpeg);
+    height: 90px;
+    border-radius:10px;
+}
+
+.TopRobóticaEF{
+    background-image: url(Imagens/cabeçalhoroboticapp1.jpeg);
+    height: 90px;
+    border-radius: 10px;
+}
+.TopRobóticaEM{
+    background-image: url(Imagens/robo.jpg);
+    height: 90px;
+    border-radius:10px;
+}
+.TopFísica{
+    background-image: url(Imagens/fisica.png);
+    height: 90px;
+    border-radius:10px;
+}
+
+a{
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;text-decoration:none;
+}
+a:hover{
+    color:red;
+}
+img{
+    width:100px;
+    border-radius:50px;
+}
+footer{
+    text-align:center;
+    font-size:medium;
+    font-family: 'Courier New', Courier, monospace;
+}
