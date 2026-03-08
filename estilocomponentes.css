@@ -82,3 +82,6 @@ footer{
     font-size:medium;
     font-family: 'Courier New', Courier, monospace;
 }
+li{
+    border-block-end:dotted;
+}
