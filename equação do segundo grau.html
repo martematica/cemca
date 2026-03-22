@@ -11,7 +11,7 @@
 <body>
     
     <div></div>
-    <h1>Matematica</h1> 
+    <h1>Equação e função do 2° grau</h1> 
     <h3>Prof: Marcelo Vieira dos Santos</h3>
     
 
@@ -20,12 +20,44 @@
 <h3>Atividades</h3>
 <ol>
 
+<li>Uma pesquisa mostra que a cada 1 real que um cabelereio aumenta no valor do corte ele 
+    perde 10 clientes, se hoje ele atende 200 clientes a 10 reais o corte. Qual o valor para
+     o melhor faturamento?</li><br><br><br><br>
+
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-1.27,0) -- (37.51,0);
+\foreach \x in {,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0,-1317.45) -- (0,2710.96);
+\foreach \y in {-1200,-1000,-800,-600,-400,-200,200,400,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-1.27,-1317.45) rectangle (37.51,2710.96);
+\draw [samples=50,rotate around={-180:(15,2250)},xshift=15cm,yshift=2250cm] plot (\x,\x^2/2/0.05);
+\begin{scriptsize}
+\fill [color=qqqqff] (10,2000) circle (1.5pt);
+\draw[color=qqqqff] (10.18,2065.5) node {$A$};
+\fill [color=qqqqff] (11,2090) circle (1.5pt);
+\draw[color=qqqqff] (11.18,2152.48) node {$B$};
+\fill [color=qqqqff] (12,2160) circle (1.5pt);
+\draw[color=qqqqff] (12.19,2225.72) node {$C$};
+\end{scriptsize}
+\end{tikzpicture}
+
 <li>Um jardim quadrado tem área igual a \(484 m^2\). Qual a medida de seus lados?</li><br><br><br><br>
 
+<li>Qual o comprimento e largura de um terreno retangular cuja área é 247m². sabendo que seu 
+    comprimento é maior que sua largura em 6m?</li><br><br><br><br>
+
+
+
+
+
 <h4>Definição</h4>
-A equação do segundo grau recebe esse nome porque é uma equação polinomial cujo 
+A equação ou função do segundo grau recebe esse nome porque é uma equação polinomial cujo 
 termo de maior grau está elevado ao quadrado. Uma das formas de resolvê-la é através da Fórmula de Bhaskara.<br>
-$$ax^2+bx+c=0$$ <br>
+$$ax^2+bx+c=0 \hspace{2cm} ou \hspace{2cm} f(x)=ax^2+bx+c$$ <br>
 Solução: <br>
 \(\Delta = b^2 - 4ac\) <br><br>
 $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$ <br>
@@ -36,14 +68,6 @@ se \(\Delta = 0\) a equação possui duas raizes reais iguais<br><br><br>
 
 
 
-<li>Qual o comprimento e largura de um terreno retangular cuja área é 247m². sabendo que seu 
-    comprimento é maior que sua largura em 6m?</li><br><br><br><br>
-
-
-
-<li>Uma pesquisa mostra que a cada 1 real que um cabelereio aumenta no valor do corte ele 
-    perde 10 clientes, se hoje ele atende 200 clientes a 10 reais o corte. Qual o valor para
-     o melhor faturamento?</li><br><br><br><br>
 
 
 </ol>
