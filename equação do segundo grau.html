@@ -10,9 +10,8 @@
 
 <body>
     
-    <div></div>
+    
     <h1>Equação e função do 2° grau</h1> 
-    <h3>Prof: Marcelo Vieira dos Santos</h3>
     
 
 
@@ -25,25 +24,6 @@
      o melhor faturamento?</li><br><br><br><br>
 
 
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-\draw[->,color=black] (-1.27,0) -- (37.51,0);
-\foreach \x in {,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36}
-\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
-\draw[->,color=black] (0,-1317.45) -- (0,2710.96);
-\foreach \y in {-1200,-1000,-800,-600,-400,-200,200,400,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600}
-\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
-\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
-\clip(-1.27,-1317.45) rectangle (37.51,2710.96);
-\draw [samples=50,rotate around={-180:(15,2250)},xshift=15cm,yshift=2250cm] plot (\x,\x^2/2/0.05);
-\begin{scriptsize}
-\fill [color=qqqqff] (10,2000) circle (1.5pt);
-\draw[color=qqqqff] (10.18,2065.5) node {$A$};
-\fill [color=qqqqff] (11,2090) circle (1.5pt);
-\draw[color=qqqqff] (11.18,2152.48) node {$B$};
-\fill [color=qqqqff] (12,2160) circle (1.5pt);
-\draw[color=qqqqff] (12.19,2225.72) node {$C$};
-\end{scriptsize}
-\end{tikzpicture}
 
 <li>Um jardim quadrado tem área igual a \(484 m^2\). Qual a medida de seus lados?</li><br><br><br><br>
 
@@ -54,8 +34,7 @@
 
 
 
-<h4>Definição</h4>
-A equação ou função do segundo grau recebe esse nome porque é uma equação polinomial cujo 
+<h4>Definição: A equação ou função do segundo grau recebe esse nome porque é uma equação polinomial cujo 
 termo de maior grau está elevado ao quadrado. Uma das formas de resolvê-la é através da Fórmula de Bhaskara.<br>
 $$ax^2+bx+c=0 \hspace{2cm} ou \hspace{2cm} f(x)=ax^2+bx+c$$ <br>
 Solução: <br>
@@ -64,11 +43,38 @@ $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$ <br>
 obs: <br>
  se \(\Delta > 0\) a equação apresenta duas raizes reais destintas<br>
 se \(\Delta < 0\) a equação não possui solução real<br>
-se \(\Delta = 0\) a equação possui duas raizes reais iguais<br><br><br>
+se \(\Delta = 0\) a equação possui duas raizes reais iguais</h4><br><br><br>
 
 
+<li>Um estudo identificou que um carro popular tem seu valor de mercado variado com a função \(f(x)=70x^2-4000x+80000\) 
+    de forma que poucos anos depois de seu lançamento ele sofre uma desvalorização, mas com o passar dos anos ele volta a se 
+    valorizar pela raridade: <br>
+    seja \(x\) os anos depois de lançado <br>
+    e \(f(x)=y\) o valor do veiculo  
+<ul>
+    <li>Qual o valor deste carro ao ser lançado?</li>
+    <li>Qual a valor deste carro daqui a 10 anos?</li>
+    <li>Qual seria o menor valor de mescado que este carro assumiria futuramente?</li>
+    <li>Quando atingiria seu valor de lançamento?</li>
+</ul><br><br><br><br><br>
+</li>
+<li>Um experimento feito em adubação de café notou-se que variando a quantidade de adubo variava a produção por pé, abaixo os dados do experimento:</li><br><br>
 
-
+<table>
+    <tr><td colspan="2">Tabela do experimento</td></tr>
+    <tr><td>Quantidade de adubo por pé</td><td>Produção de café por pé</td></tr>
+    <tr><td>0g</td><td>800g</td></tr>
+    <tr><td>20g</td><td>1340g</td></tr>
+    <tr><td>40g</td><td>1760g</td></tr>
+    <tr><td>60g</td><td>2060g</td></tr>
+    <tr><td>80g</td><td>2240g</td></tr>
+    
+</table>
+<ul>
+    <li>Qual a quantidade de adubo colocar por pé que nos dá a maior produção?</li>
+    <li>Qual a função que descreve a situação?</li>
+</ul>
+<br><br><br><br><br>
 
 </ol>
 <footer>Atualização Fevereiro de 2025</footer>
