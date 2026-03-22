@@ -56,6 +56,7 @@ h3{
 h4{
     border: solid;
     background-color: bisque;
+    border-radius: 15px;
 }
 
 img{
