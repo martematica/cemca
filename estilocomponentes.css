@@ -86,3 +86,6 @@ li{
     border-block-end:dotted;
 }
  .frase{text-align: right;font-family: Georgia}
+@media(max-width:1100px){
+b1{width: 90%;height: 80px;font-size:50px;margin-bottom: 50px;}
+}
