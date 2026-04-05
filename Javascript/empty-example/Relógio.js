@@ -19,7 +19,15 @@ function draw() {
   text('6',195,395);
   text('3', 380,200);
   text('9', 10, 200);
-fill(100);
+  text('1', 290, 50);
+  text('2', 355, 110);
+  text('4', 355,300);
+  text('5', 290, 370);
+  text('7', 100,370);
+  text('8', 35, 300);
+  text('10', 30, 108);
+  text('11', 100, 42);
+  fill(100);
   quad(160,420,260,420,260,460,160,460);
   fill(255);
   text(hour(),170,450);
@@ -29,11 +37,11 @@ fill(100);
   text(second(),230,450);
   
   translate(200,200);
-  rotate(30*hour()+minute()*0.08-90);
+  rotate(30*hour() + minute()*0.5-90);
   strokeWeight(3);
   line(0,0,100,0);
   
-  rotate(-30*hour()+90);
+  rotate(-30*hour() - minute()*0.5+90);
   rotate(6*minute()-90);
   strokeWeight(2);
   line(0,0,160,0);
