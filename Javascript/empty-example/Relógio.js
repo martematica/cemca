@@ -29,7 +29,7 @@ fill(100);
   text(second(),230,450);
   
   translate(200,200);
-  rotate(30*hour()-90);
+  rotate(30*hour()+minute()*0.08-90);
   strokeWeight(3);
   line(0,0,100,0);
   
