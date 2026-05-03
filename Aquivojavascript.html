@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloaulas.css">
+    <title>Martematica</title>
+</head>
+<body>
+    <h1>Primeiro Arquivo em javascript</h1>
+    Para colocar um link para um arquivo em javascript, basta ir no p5.js, no canto superior esquerdo no sinal de mais ir em <b>criate file</b> ou 
+    <b>criar arquivo</b> nomeie com <b>letra.html</b> assim coloque estes codigo neste arquivo
+    <h4>
+ &lt;!DOCTYPE html&gt; <br>
+ &lt;html lang="pt-br"&gt; <br>
+  &lt;head&gt; <br>
+  &lt;script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js">&lt;/script&gt; <br>
+ &lt;script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/addons/p5.sound.min.js"&gt;&lt;/script&gt; <br>
+ <br>
+   <br>
+ <br>
+   &lt;link rel="stylesheet" type="text/css" href="style.css"&gt; <br>
+   &lt;meta charset="utf-8" /&gt; <br>
+ <br>
+  &lt;/head&gt; <br>
+  &lt;body&gt; <br>
+    &lt;main&gt; <br>
+    &lt;/main&gt; <br>
+    &lt;script src="sketch.js"&gt; &lt;/script&gt; <br>
+  &lt;/body&gt; <br>
+ &lt;/html&gt; <br></h4>
+
+ feito isso voltamos no arquivo <b>index.html</b> e colocamos o link da página que acabamos de criar <br> 
+ <p>&#60;a href="letra.html"&#62;letra em javascript &#60;/a&#62;</p> <br>
+ agora vamos no arquivo <b>sketch.js</b> e vamos adicionar uma letra usando linhas <br>
+<h4>
+function setup() { <br>
+  createCanvas(<b>LARGURA EM PIXELS</b>, ALTURA EM PIXELS); <br>
+} <br><br>
+
+function draw() { <br>
+  background(VERMELHO, VERDE, AZUL); <br>
+  line(X <sub>1</sub>, Y <sub>1</sub>,X <sub>2</sub>, Y <sub>2</sub>); <br> 
+} <br>
+</h4>
+as variaveis LARGURA E ALTURA define o tamalho da janela que irá mostra seu arquivo em javascript <br>
+as variaveis VERMELHO, VERDE E AZUL podem ter valores de 0 a 255 até achar a cor que você quiser <br>
+as variaveis X<sub>1</sub>, Y<sub>1</sub> são as cordenadas do ponto de inicio da reta e X<sub>2</sub>, Y<sub>2</sub> as cordenada do ponto de termino da reta <br><br>
+
+<h4>
+function setup() { <br>
+  createCanvas(400, 400); <br>
+} <br><br>
+
+function draw() { <br>
+  background(150, 150, 150); <br>
+  line(50, 50, 350, 350); <br>
+  line(50, 350, 350, 50); <br> 
+} <br>
+</h4>
+<br>Resultado <br><br>
+<img src="Imagens/xjavascript.png" alt="Programação"> <br><br><br><br><br>
+
+</body>
+</html>
