@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática</title>
+    <link rel="stylesheet" href="estiloaulas.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    
+    <div></div>
+    <h1>Pixels</h1> 
+Um pixel (abreviação de picture element) é a menor unidade básica de uma imagem digital. Ele funciona como um minúsculo ponto ou "bloco de cor" que, quando 
+combinado com milhões de outros em uma grade, forma todas as imagens, textos e vídeos que você vê nas telas do seu celular, computador ou TV. <br><br>
+<h3>Como um pixel funciona?</h3>
+<ul>
+    <li>Cores (RGB): Cada pixel individual geralmente é composto por três luzes coloridas: Vermelho, Verde e Azul (sistema conhecido como RGB).</li>
+    <li>Variação: Ao ajustar a intensidade dessas três cores, o pixel é capaz de reproduzir milhões de tonalidades diferentes.</li>
+</ul>
+Resolução <br>
+<b>HD (\(1280 \times 720\))</b>,pixels possui um total de \(921.600\) pixels <br>
+<b>full HD (\(1920 \times 1080\))</b>,pixels possui um total de \(2.073.600\) pixels <br>
+<b>4k (\(3840 \times 2160\))</b>,pixels possui um total de \(8.294.400\) pixels <br><br><br>
+
+Agora vamos Fazer a letra de seu nome em uma tela de (\(40,40\)) 1600 pixels <br>
+Para colocar um link para um arquivo em javascript, basta ir no p5.js, no canto superior esquerdo no sinal de mais ir em <b>criate file</b> ou 
+    <b>criar arquivo</b> nomeie com <b>letraempixels.html</b> assim coloque estes codigo neste arquivo
+ <h4>
+ &lt;!DOCTYPE html&gt; <br>
+ &lt;html lang="pt-br"&gt; <br>
+  &lt;head&gt; <br>
+  &lt;script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js">&lt;/script&gt; <br>
+ &lt;script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/addons/p5.sound.min.js"&gt;&lt;/script&gt; <br>
+ <br>
+   <br>
+ <br>
+   &lt;link rel="stylesheet" type="text/css" href="style.css"&gt; <br>
+   &lt;meta charset="utf-8" /&gt; <br>
+ <br>
+  &lt;/head&gt; <br>
+  &lt;body&gt; <br>
+    &lt;main&gt; <br>
+    &lt;/main&gt; <br>
+    &lt;script src="sketch1.js"&gt; &lt;/script&gt; <br>
+  &lt;/body&gt; <br>
+ &lt;/html&gt; <br></h4>
+
+ feito isso voltamos no arquivo <b>index.html</b> e colocamos o link da página que acabamos de criar <br> 
+ <p>&#60;a href="letraempixels.html"&#62;letra em javascript &#60;/a&#62;</p> <br>
+ agora vamos no arquivo <b>sketch1.js</b> e vamos adicionar uma letra usando linhas <br>
+
+<h4>
+function setup() { <br>
+  createCanvas(400, 400); <br>
+} <br><br>
+
+function draw() { <br>
+  background(150, 150, 150); <br>
+    fill(0,200,200); <br>
+    square(60,30,10); <br>
+    square(60,40,10);<br>
+    square(60,50,10);<br>
+    square(60,60,10);<br>
+    square(60,70,10);<br>
+    square(60,80,10);<br>
+    square(60,90,10);<br>
+    square(60,100,10);<br>
+    square(70,40,10);<br>
+    square(80,50,10);<br>
+    square(90,40,10);<br>
+    square(100,30,10);<br>
+    square(100,40,10);<br>
+    square(100,50,10);<br>
+    square(100,60,10);<br>
+    square(100,70,10);<br>
+    square(100,80,10);<br>
+    square(100,90,10);<br>
+    square(100,100,10);<br>
+
+} <br>
+</h4>
+sendo <b>square(Coordenada X,Coordenada Y,Largura do quadrado);</b>
+
+
+<footer>Atualização Fevereiro de 2025</footer>
+</body>
+</html>
