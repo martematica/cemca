@@ -1,0 +1,21 @@
+ 
+ body{
+    margin: 10%;
+    font-size: xx-large;
+ } 
+ 
+ h1{
+            background-color:rgb(15,76,129);
+            color: aliceblue;
+            text-align: center;
+            font-size:100px;
+            border-radius: 10px;
+        }
+        a{
+            background-color:rgb(15,76,129);
+            width: 300px;
+            margin: 10%;
+            border-radius: 20px;
+            color: aliceblue;
+            font-size: larger;
+        }
