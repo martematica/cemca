@@ -156,7 +156,7 @@ function draw() {
 
   // Show 'Click to start' if game is paused
   if (isLooping() === false) {
-    text('Click to start', width / 2, height / 2 - 20);
+    text('Click para começar!!!', width / 2, height / 2 - 20);
   }
 }
 

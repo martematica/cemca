@@ -3,7 +3,7 @@ let y = 0;
 
 function setup() {
   createCanvas(1000, 720);
-  background(220);
+  background(250);
   // Desenhar os eixos
   stroke(0);
   line(width / 2, 0, width / 2, height); // Eixo y
