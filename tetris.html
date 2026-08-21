@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tetris p5.js</title>
+  <script type="importmap">
+    {
+      "imports": {
+        "p5": "https://cdn.jsdelivr.net/npm/p5@1.9.0/+esm"
+      }
+    }
+  </script>
+  <style>
+    body { margin:0; display:flex; justify-content:center; align-items:center; height:100vh; background:#111; color:#fff; font-family:sans-serif; }
+    canvas { border:2px solid #555; }
+    h1{position: absolute; margin-top:-800px;}
+  </style>
+</head>
+<body>
+    <h1>Jogo Tetris</h1> 
+  <script type="module">
+    import p5 from "p5";
+
+    new p5((sk) => {
+      const cols = 10;
+      const rows = 20;
+      const blockSize = 30;
+      let grid;
+      let currentPiece;
+      let score = 0;
+      let dropInterval = 500;
+      let lastDrop = 0;
+      let gameOver = false;
+
+      const colors = [
+        [0,0,0],
+        [0,255,255], // I
+        [0,0,255], // J
+        [255,165,0], // L
+        [255,255,0], // O
+        [0,255,0], // S
+        [160,0,255], // T
+        [255,0,0] // Z
+      ];
+
+      const pieces = [
+        [], // 0
+        [[1,1,1,1]], // I
+        [[1,0,0],[1,1,1]], // J
+        [[0,0,1],[1,1,1]], // L
+        [[1,1],[1,1]], // O
+        [[0,1,1],[1,1,0]], // S
+        [[0,1,0],[1,1,1]], // T
+        [[1,1,0],[0,1,1]] // Z
+      ];
+
+      sk.setup = () => {
+        sk.createCanvas(cols * blockSize, rows * blockSize);
+        grid = createGrid();
+        spawnPiece();
+        sk.frameRate(60);
+      }
+
+      function createGrid() {
+        return Array.from({length: rows}, () => Array(cols).fill(0));
+      }
+
+      function spawnPiece() {
+        let type = sk.floor(sk.random(1, pieces.length));
+        currentPiece = {
+          shape: pieces[type],
+          color: type,
+          x: 3,
+          y: 0
+        }
+        if (collides(currentPiece)) {
+          gameOver = true;
+        }
+      }
+
+      function collides(piece) {
+        for (let y = 0; y < piece.shape.length; y++) {
+          for (let x = 0; x < piece.shape[y].length; x++) {
+            if (piece.shape[y][x]) {
+              let newX = piece.x + x;
+              let newY = piece.y + y;
+              if (newX < 0 || newX >= cols || newY >= rows || grid[newY][newX]) {
+                return true;
+              }
+            }
+          }
+        }
+        return false;
+      }
+
+      function merge() {
+        for (let y = 0; y < currentPiece.shape.length; y++) {
+          for (let x = 0; x < currentPiece.shape[y].length; x++) {
+            if (currentPiece.shape[y][x]) {
+              grid[currentPiece.y + y][currentPiece.x + x] = currentPiece.color;
+            }
+          }
+        }
+      }
+
+      function clearLines() {
+        for (let y = rows-1; y >= 0; y--) {
+          if (grid[y].every(cell => cell!== 0)) {
+            grid.splice(y, 1);
+            grid.unshift(Array(cols).fill(0));
+            score += 100;
+            y++; // checa de novo a mesma linha
+          }
+        }
+      }
+
+      function rotate(piece) {
+        let newShape = piece.shape[0].map((_, i) => piece.shape.map(row => row[i]).reverse());
+        return {...piece, shape: newShape};
+      }
+
+      sk.draw = () => {
+        sk.background(20);
+        drawGrid();
+
+        if (!gameOver) {
+          if (sk.millis() - lastDrop > dropInterval) {
+            let newPiece = {...currentPiece, y: currentPiece.y + 1};
+            if (!collides(newPiece)) {
+              currentPiece = newPiece;
+            } else {
+              merge();
+              clearLines();
+              spawnPiece();
+            }
+            lastDrop = sk.millis();
+          }
+          drawPiece();
+        } else {
+          sk.fill(255,0,0);
+          sk.textSize(32);
+          sk.textAlign(sk.CENTER);
+          sk.text("GAME OVER", sk.width/2, sk.height/2);
+          sk.noLoop();
+        }
+
+        sk.fill(255);
+        sk.textSize(16);
+        sk.textAlign(sk.LEFT);
+        sk.text(`Score: ${score}`, 10, 20);
+      }
+
+      function drawGrid() {
+        for (let y = 0; y < rows; y++) {
+          for (let x = 0; x < cols; x++) {
+            let val = grid[y][x];
+            if (val) {
+              sk.fill(colors[val]);
+              sk.stroke(0);
+              sk.rect(x * blockSize, y * blockSize, blockSize, blockSize);
+            }
+          }
+        }
+      }
+
+      function drawPiece() {
+        sk.fill(colors[currentPiece.color]);
+        sk.stroke(0);
+        for (let y = 0; y < currentPiece.shape.length; y++) {
+          for (let x = 0; x < currentPiece.shape[y].length; x++) {
+            if (currentPiece.shape[y][x]) {
+              sk.rect((currentPiece.x + x) * blockSize, (currentPiece.y + y) * blockSize, blockSize, blockSize);
+            }
+          }
+        }
+      }
+
+      sk.keyPressed = () => {
+        if (gameOver) return;
+
+        let newPiece = {...currentPiece};
+        if (sk.keyCode === sk.LEFT_ARROW) newPiece.x--;
+        if (sk.keyCode === sk.RIGHT_ARROW) newPiece.x++;
+        if (sk.keyCode === sk.DOWN_ARROW) newPiece.y++;
+        if (sk.keyCode === sk.UP_ARROW) newPiece = rotate(newPiece);
+
+        if (!collides(newPiece)) {
+          currentPiece = newPiece;
+        }
+
+        // queda rápida
+        if (sk.keyCode === 32) { // espaço
+          while (!collides({...currentPiece, y: currentPiece.y + 1})) {
+            currentPiece.y++;
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
