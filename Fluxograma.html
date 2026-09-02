@@ -6,20 +6,54 @@
     <title>Matemática</title>
     <link rel="stylesheet" href="estiloaulas.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="Javascript/p5.js"></script>
+    <script src="Javascript/p5.min.js"></script>
 </head>
 
 <body>
     
     
-    <h1>Site acessivel</h1>
-    N
-    <br>
-    <h3>Temas de cada das aulas </h3> 
+    <h1>Fluxograma</h1>
+    
+    
 
     
  
-<br><br><br><br><br><br>
+<br>
+<script>
+    function setup() {
+  createCanvas(900, 580);
+  fill(0,220,0);
+ let a = createA('https://martematica.github.io/cemca','Tema principal','_self');
+  a.position(420,310);
+}
 
+function draw() {
+  background(220);
+  
+ 
+  fill(200,0,0);
+  line(50,140,450,300);
+  line(470,50,480,300);
+  line(800,150,500,300);
+ square(400,250,150,100);
+  fill(200,200,200);
+  textSize(20);
+ 
+  
+  square(50,50,150);
+  fill(0,200,0);
+  square(400,50,150);
+  fill(200,200,0);
+  square(700,50,150);
+  fill(0,150,250);
+  text('meu link 1',70,130);
+  text('meu link 2',430,130);
+  text('meu link 3',730,130);
+  
+}
+
+</script>
 
  
 
