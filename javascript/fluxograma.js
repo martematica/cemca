@@ -1,10 +1,6 @@
 function setup() {
   createCanvas(1500, 800);
-  
- let a = createA('Fluxograma.html', 'Pagina de estudos','_self');
-  a.position(25, 35);
 }
-
 function draw() {
   background(220);
 
