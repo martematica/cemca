@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática</title>
+    <link rel="stylesheet" href="estiloaulas.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    
+    <div></div>
+    <h1>Colorir função <b>fill</b></h1> 
+  Para colorir usamos a função <b>fill</b> que traduzindo preenchimento colocamos a variaveis <b>RGB</b>  assim <b>fill(Red,Green,Blue);</b> sendo esta variáveis de 0 a 255 
+  sendo que o fill vai colorir todas as figuras abaixo, caso queira colorir cada figura de uma cor diferente, antes de cada figura precisará de um fill com a cor desejada.
+  Exemplo: <br>
+<h4>
+function setup() { <br>
+  createCanvas(400, 400); <br>
+} <br><br>
+
+function draw() { <br>
+  background(150, 150, 150); <br>
+  fill(255,0,0);  <br>
+  square(60,30,10); <br>
+    square(60,40,10);<br>
+    
+
+} <br>
+</h4>
+Desta forma os dois quadradinhos será colorido com a cor vermelha <br>
+<h4>
+function setup() { <br>
+  createCanvas(400, 400); <br>
+} <br><br>
+
+function draw() { <br>
+  background(150, 150, 150); <br>
+  fill(255,0,0);  <br>
+  square(60,30,10); <br>
+  fill(0,255,0); <br>
+  square(60,40,10);<br>
+  
+} <br>
+</h4>
+Desta outra forma o primeiro quadradinho será colorido de vermelho e o segundo de verde 
+
+<h3>Agora faça um desenho em pixels na sua página?</h3>
+
+
+<footer>Atualização Fevereiro de 2025</footer>
+</body>
+</html>
