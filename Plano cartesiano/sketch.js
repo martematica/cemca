@@ -51,7 +51,7 @@ function draw() {
 }
 function mousePressed(){
   
-  circle(mouseX,mouseY,3);
+  circle(mouseX,mouseY,5);
 console.log(int((mouseX-500)/50),int((mouseY-500)/50));
 
 }
