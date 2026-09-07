@@ -1,1 +1,0 @@
-alert("Sejam Bem vindos a nossa página!!!");
