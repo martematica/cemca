@@ -20,7 +20,7 @@
    caso coloque a função fill antes temos <br>
     <h4>fill(mouseX,mouseY,250);</h4>
     deslocamento para direita o figura fica vermelha, deslocamento para baixo fica verde e deslocamento diagonal fica amarelo (junção de verde e vermelho). <br>
-    O mesmo pode ser feito com as funções <b>square </b> e <b> rect</b> 
+    O mesmo pode ser feito com as funções <b>square </b> e <b> rect</b> veja abaixo:
     <br>
     <h3>Agora deixe seu desenho geometrico interativo? </h3> 
 
@@ -28,7 +28,25 @@
  
 <br><br><br><br><br><br>
 
+<script src="Javascript/p5.sound.min.js"></script>
+<script src="Javascript/p5.js"></script>
+<script>
+    function setup() {
+  createCanvas(500, 500);
+  
+}
 
+function draw() {
+    background(mouseX/2,mouseY/2,0);
+  fill(0,0,0);
+  square(mouseX-20,mouseY-20,20);
+    circle(mouseX+10,mouseY+10,30);
+    text('Vermelho',448,50);
+    text('Amarelo',450,480);
+    text('Verde',5,480);
+}
+
+</script>
  
 
 <footer>&copy; Atualização junho de 2026</footer>

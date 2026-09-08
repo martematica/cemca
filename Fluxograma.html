@@ -13,44 +13,59 @@
 <body>
     
     
-    <h1>Fluxograma</h1>
+    <h1>Fluxograma ou Mapa Mental</h1>
+    <h2>Fluxograma</h2>
+    Um fluxograma é um diagrama visual que explica a sequência de etapas, decisões e o fluxo de trabalho de um processo usando símbolos padronizados. 
+    <h3>Simbolos principais usados</h3>
     
-    
-
-    
+    <ul>
+      <li><b>Elipse ou Círculo:</b> Indica o início e o fim do fluxo.</li>
+      <li><b>Retângulo:</b> Representa uma atividade ou etapa do processo.</li>
+      <li><b>Losango:</b> Simboliza um ponto de decisão (como "Sim" ou "Não").</li>
+      <li><b>Setas:</b> Indicam a direção e o sentido do fluxo das ações.</li>
+    </ul>
+<h2>Mapa Mental</h2>
+    Um mapa mental é um diagrama visual usado para organizar ideias, melhorar a memorização e estimular a criatividade a partir de um conceito central.
+    <h3>Como usar e para que serve</h3>
+    <ul>
+      <li><b>Diagrama visual:</b> Conecta conceitos usando palavras-chave, cores e imagens.</li>
+      <li><b>Tema central:</b> Fica localizado no meio da página ou tela.</li>
+      <li><b>Ramificações:</b> Puxam o pensamento principal para subtemas, como galhos de árvore.</li>
+      <li><b>Aplicações:</b> Ajuda em estudos, reuniões de brainstorming, planejamento de rotinas e resolução de problemas</li>
+    </ul>
  
 <br>
 <script>
-    function setup() {
-  createCanvas(900, 580);
-  fill(0,220,0);
- let a = createA('https://martematica.github.io/cemca','Tema principal','_self');
-  a.position(420,310);
+function setup() {
+  createCanvas(900, 600);
+  let a = createA('https://martematica.github.io/cemca','Martematica');
+  a.position(560,1250);
+  let b = createA('https://martematica.github.io/cemca/Fisica.html','Física');
+  b.position(950,1270);
 }
 
 function draw() {
   background(220);
-  
+line(370,320,50,350);
+line(370,320,800,350);
+line(400,300,350,100);
+  line(480,300,600,100);
+
+  fill(250,0,0);
+  square(370,260,150,10);
+  fill(0,250,0);
+  square(50,300,100,10);
+   rect(730,300,150,100);
+  fill(0,0,250);
+  circle(350,100,120);
+  triangle(600,50,550,150,650,150);
  
-  fill(200,0,0);
-  line(50,140,450,300);
-  line(470,50,480,300);
-  line(800,150,500,300);
- square(400,250,150,100);
-  fill(200,200,200);
+ 
+
+fill(0,0,0);
   textSize(20);
- 
-  
-  square(50,50,150);
-  fill(0,200,0);
-  square(400,50,150);
-  fill(200,200,0);
-  square(700,50,150);
-  fill(0,150,250);
-  text('meu link 1',70,130);
-  text('meu link 2',430,130);
-  text('meu link 3',730,130);
-  
+
+  text('Aula 1',60,350);
 }
 
 </script>
