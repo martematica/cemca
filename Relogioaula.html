@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática</title>
+    <link rel="stylesheet" href="estiloaulas.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    
+    
+    <h1>Construindo um Relógio de ponteiro</h1>
+  Para construção de um relógio vamos usar a função translação e função rotação primeiro colocamos uma 
+  <h4>translação(200,200);</h4>
+  para colocar o centro e no meio de nossa tela 
+  depois colocamos um ponteiro menor da hora 
+  <h4>line(0,0,0,-100);</h4>
+    repare que inicialmente ele estará na posição 12 horas do relógio ou seja na posição 90° assim colocamos antes da função <b>line(0,0,0,-100);</b> 
+    <h4>rotate(30*hour());</h4>
+ multiplicamos por 30 pois 360° graus dividido por 12 horas \(\frac{360°}{60} = 30\) graus por cada horas, para que o ponteiro aponte para a hora do momento vá dentro da <b>function setup</b> e coloque 
+    <h4>angleMode(DEGREES);</h4>
+    para colocar a medida dos ângulos em graus e confirme a hora colocando um circulo dentro da <b>function draw</b> depois do background 
+    <h4>circle(0,0,400);</h4>
+próximo passo criar o ponteiro dos minutos que é um pouco maior 
+ <h4>line(0,0,0,-150);</h4> 
+ e em seguida colocar antes dele 
+ <h4>rotate(6*minute()-30*hour());</h4>
+ 6 vezes minutos por que \(\frac{360°}{60} = 6\) graus por minutos e o <b>-30*hour()</b> por que ja foi rotacionado antes precisa voltar esta diferença 
+e para finalizar basta colocar o ponteiro dos minutos 
+<h4>line(0,0,0,-190);</h4> colocar antes 
+<h4>rotate(6*second()-6*minute());</h4>
+usando a função <b>text</b>
+colocamos o 12 do relogio depois do circle(0,0,400);
+<h4>text('12',-10,-190);</h4> 
+
+<h3>Agora logo após  <b>text('12',-10,-190);</b> adicione todos os números do relógio?</h3>
+
+
+obs: veja como ficou no inicio desta pagina em javascrip.
+
+ 
+<br><br><br><br><br><br>
+
+
+ 
+
+<footer>&copy; Atualização junho de 2026</footer>
+</body>
+</html>
+
+
