@@ -5,4 +5,7 @@ html, body {
 canvas {
   display: block;
 }
-
+a{
+  border:solid;
+  background:rgb(200,200,200);
+  height:40px;}

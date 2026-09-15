@@ -9,6 +9,8 @@ let t1 = -150;
 function setup() {
   createCanvas(1000, 600);
   background(250,250,250);
+  let a = createA('https://editor.p5js.org/martematica/full/9mIW0XmGc','Apagar',);
+  a.position(700,28);
   
 }
 
@@ -22,6 +24,7 @@ function draw() {
   rect(435,30,70,40);
   rect(535,30,50,40);
   rect(615,30,50,40);
+  
 fill(0);
   text('f(x) = x',32,53);
   text('f(x) = - x',100,53);
@@ -84,6 +87,7 @@ if(mouseX<145 && mouseX>100 && mouseY<70 && mouseX>30){
   fill(220);  
  t1 = t1 + 1;
    }
+    
 }
 
 
