@@ -9,7 +9,7 @@ let t1 = -150;
 function setup() {
   createCanvas(1000, 600);
   background(250,250,250);
-  let a = createA('https://editor.p5js.org/martematica/full/9mIW0XmGc','Apagar',);
+  let a = createA('https://martematica.github.io/cemca/Fun%C3%A7%C3%B5es/index.html','Apagar',);
   a.position(700,28);
   
 }
