@@ -1,13 +1,13 @@
-let x = -300; 
-let x1 = -300;
+let x = -350; 
+let x1 = -380;
 let y = -150;
 let y1 = -150;
-let z = -660;
-let z1 = -660;
-let t = -150;
-let t1 = -150;
+let z = -900;
+let z1 = -900;
+let t = -130;
+let t1 = -130;
 function setup() {
-  createCanvas(1000, 600);
+  createCanvas(1500, 750);
   background(250,250,250);
   let a = createA('https://martematica.github.io/cemca/Fun%C3%A7%C3%B5es/index.html','Apagar',);
   a.position(700,28);
