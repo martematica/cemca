@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática</title>
+    <link rel="stylesheet" href="estiloaulas.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    
+    
+    <h1>Movimento Lunar</h1>
+    Nesta aula vamos definir o movimento da lua que será definida de forma parametrizada usando seno e cosseno, uma variável <b>x</b> em 360° definimos a Terra e a lua retimos as bordas e 
+    colocamos duas circunferencias sobreposta para as fases da lua.
+    <br>
+    <h4> let x = 0; <br>
+function setup() { <br>
+  createCanvas(500, 500); <br>
+} <br><br>
+
+function draw() {<br> 
+  background(0); <br>
+  fill(255); <br>
+  circle(100,100,5); <br>
+  circle(100,150,5); <br>
+  fill(0,0,0); <br>
+  text("terra",240,170); <br>
+  fill(0,200,250); <br>
+  circle(250,250,150); <br>
+  translate(250,250); <br><br>
+
+  fill(150); <br>
+  circle(240*sin(x),90*cos(x),20); <br>
+  fill(20); <br>
+  noStroke(); <br>
+  circle(240*sin(x)-x/9,90*cos(x),20); <br>
+  if(x &gt; 360){x = x + 0.01;}  <br>
+  else{x = 0;} <br>
+} </h4> 
+
+    <h3>Agora coloque estrelas no céu?</h3>
+ 
+<br><br><br><br><br><br>
+
+
+ 
+
+<footer>&copy; Atualização junho de 2026</footer>
+</body>
+</html>
