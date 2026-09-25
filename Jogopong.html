@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática</title>
+    <link rel="stylesheet" href="estiloaulas.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    
+    
+    <h1>Pong</h1>
+    Nesta aula vamos fazer o jogo do pong de forma a trabalhar as funções <b>keyPressed</b> para movimentar os objetos com as teclas, e trabalhar os movimentos da bolinha 
+    de forma autonoma com a função <b>if</b>
+    <br>
+    <h4> let xbarra=150; <br>
+let ponto = 0; <br>
+let xbola = 200; <br>
+let ybola = 0;<br>
+let xvelocidade = 3;<br>
+let yvelocidade = 3;<br>
+function setup() {<br>
+  createCanvas(800, 600);<br>
+}<br><br>
+
+function draw() {<br>
+  background(220);<br>
+  
+
+  textSize(30);<br>
+<br>
+xbola = xbola + xvelocidade; <br>
+ybola = ybola + yvelocidade;  <br>
+text('Ponto:',30,30);<br>
+text(ponto,130,30);<br>
+if(xbola > width){xvelocidade = -xvelocidade;}<br>
+if(xbola < 0){xvelocidade = -xvelocidade;} <br>
+if(ybola < 0){yvelocidade = -yvelocidade;ponto = ponto+1;}<br>
+if(dist(xbola,ybola,xbarra+100,height-20)&gt;20 || dist(xbola,ybola,xbarra,height-20)&gt;20||dist(xbola,ybola,xbarra+50,height-20)&gt;20){yvelocidade = - yvelocidade;}  <br><br>
+  
+
+  if(ybola >height){text('Perdeu!!!',width/2-50,200); text('Pontuação:',width/2-50,250);text(ponto,width/2+120,250);} <br><br>
+  circle(xbola,ybola,20); <br>
+  rect(xbarra,height-20,100,15,10); <br>
+}  <br><br>
+function keyPressed() { <br>
+if(key === RIGHT_ARROW){xbarra = xbarra+50;} <br>
+  if(key === LEFT_ARROW){xbarra = xbarra-50} <br>
+} <br></h4> 
+
+    
+ 
+<br><br><br><br><br><br>
+
+
+ 
+
+<footer>&copy; Atualização junho de 2026</footer>
+</body>
+</html>
