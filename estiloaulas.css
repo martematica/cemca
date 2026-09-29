@@ -86,9 +86,17 @@ p{
 }
 table{
     text-align: center;
+    background-color: black;
+    
 }
 td{
-    border: solid;
+    border: none;
+    background-color:white;
+}
+th{
+    background-color: black;
+    color: aqua;
+    text-align: center;
 }
 video{
     border: solid;
