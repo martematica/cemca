@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martemática</title>
+    <link rel="stylesheet" href="estiloaulas.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    
+    
+     
+   <h1>Programação do Sistema Solar</h1> <br>
+  O Sistema Solar é o conjunto formado pelo Sol e por todos os corpos celestes que orbitam sob sua influência gravitacional. 
+  Formou-se há cerca de 4,6 bilhões de anos e está localizado na Via Láctea. <br><br>
+ 
+<h2>Composição Principal</h2>
+<ul>
+<li> O Sol: Estrela central que concentra cerca de 99,8% de toda a massa do Sistema Solar, fornecendo luz, calor e a gravidade necessária para manter a órbita dos astros.</li>
+ <li>8 Planetas: Divididos em dois grupos conforme o Brasil Escola:</li>
+ <li>Planetas rochosos (interiores): Mercúrio, Vênus, Terra e Marte.</li>
+ <li>Planetas gasosos/gigantes (exteriores): Júpiter, Saturno, Urano e Netuno.</li>
+  </ul>
+<br><br>
+Precisamos primeiro programar as dimensões dos planetas para isso vamos usar como referencia os raios dos planetas. <br>
+Para programar um sistema Solar interativo precisamos programar as orbitas dos planetas para isso vamos usar as distâncias dos planetas do Sol e o ano de cada planeta em relação do ano de mercúrio. <br>
+
+para realizar o movimento em torno do Sol usaremos 
+<h4>DISTANCIASOL*t*sin(r/ANORELAÇÃOAMERCURIO)</h4> para X e <h4>\(\frac{DISTANCIASOL}{3}\)*t*sin(\(\frac{r}{ANORELAÇÃOAMERCURIO}\))</h4> para Y 
+
+
+como calcular ANORELAÇÃOAMERCURIO basta tranformar os anos do planetas em dias e dividir por 88 exemplo terra 365 dias o ano: <br>
+distancia do Sol 149 milhoes de km  e \(\frac{365}{88}=4,14 \cdots\) arredondamos para 4 logo <br><br>
+<h4>circle(149*t*sin(r/4),50*t*cos(r/4),6*t)</h4> assim ela vai fazer a orbita em torno do Sol nas distância correta em escala e em quanto mercurio da 4 voltas no Sol a o planeta Terra dá 1 volta <br>  
+<h2>Agora faça os calculos com os dados da ultima atividade e programe os outros planetas?</h2>
+<br><br><br><br><br><br>
+
+
+ 
+
+<footer>&copy; Atualização junho de 2026</footer>
+</body>
+</html>
